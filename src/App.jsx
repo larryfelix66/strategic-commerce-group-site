@@ -1,3 +1,5 @@
+import React from 'react';
+
 const featuredBrands = [
   'Tru',
   'Tabasco',
