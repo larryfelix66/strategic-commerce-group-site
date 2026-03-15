@@ -373,3 +373,9 @@ input {
     padding-top: 60px;
   }
 }
+
+.hero-logo {
+  width: 600px;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
