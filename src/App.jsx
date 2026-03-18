@@ -319,22 +319,23 @@ export default function App() {
     />
 
     <form
-      className="form-grid"
-      action="https://formspree.io/f/xaqpazwp"
-      method="POST"
-    >
-      <input type="text" name="companyName" placeholder="Company name" required />
-      <input type="text" name="contactName" placeholder="Contact name" required />
-      <input type="email" name="email" placeholder="Email address" required />
-      <input type="text" name="productLines" placeholder="Brand or product lines" />
+  className="form-grid"
+  action="https://formspree.io/f/xaqpazwp"
+  method="POST"
+  autoComplete="off"
+>
+  <input type="text" name="companyName" placeholder="Company name" required autoComplete="off" />
+  <input type="text" name="contactName" placeholder="Contact name" required autoComplete="off" />
+  <input type="email" name="email" placeholder="Email address" required autoComplete="off" />
+  <input type="text" name="productLines" placeholder="Brand or product lines" autoComplete="off" />
 
-      <input type="hidden" name="_subject" value="New Supplier Application - Strategic Commerce Group" />
-      <input type="hidden" name="_next" value="https://strategic-commerce-group-site.vercel.app/" />
+  <input type="hidden" name="_subject" value="New Supplier Application - Strategic Commerce Group" />
+  <input type="hidden" name="_next" value="https://strategic-commerce-group-site.vercel.app/#thank-you" />
 
-      <button className="button button-primary" type="submit">
-        Submit partnership inquiry
-      </button>
-    </form>
+  <button className="button button-primary" type="submit">
+    Submit partnership inquiry
+  </button>
+</form>
   </div>
 </section>
 
