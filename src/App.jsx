@@ -198,19 +198,19 @@ export default function App() {
         </section>
 
         <section className="section" id="compliance">
-          <div className="container">
-            <SectionHeading
-              eyebrow="Trust and compliance"
-              title="Distribution standards that help brands feel safe approving your account."
-              text="These are the exact signals many manufacturers and authorized distributors look for when they review a prospective wholesale partner."
-            />
-            <div className="grid three-up">
-              {complianceItems.map((item) => (
-                <Card key={item.title} title={item.title} text={item.text} />
-              ))}
-            </div>
-          </div>
-        </section>
+  <div className="container">
+    <SectionHeading
+      eyebrow="Trust and compliance"
+      title="Trust and compliance are the foundation of every supplier relationship we build."
+      text="Strategic Commerce Group operates with a strict commitment to sourcing products exclusively through authorized distributors, manufacturers, and verified wholesale channels. We maintain clear procurement documentation, uphold MAP and brand policy standards, and prioritize responsible marketplace representation to protect brand integrity. Our processes are designed to align with manufacturer expectations, ensuring transparency, consistency, and accountability across every transaction. By maintaining high compliance standards and a long-term partnership approach, we position ourselves as a reliable and trusted distribution partner—making it easy for brands and suppliers to confidently approve and grow with us."
+    />
+    <div className="grid three-up">
+      {complianceItems.map((item) => (
+        <Card key={item.title} title={item.title} text={item.text} />
+      ))}
+    </div>
+  </div>
+</section>
 
         <section className="section section-white" id="catalog">
           <div className="container">
