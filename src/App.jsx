@@ -163,10 +163,10 @@ export default function App() {
         <section className="section" id="brands">
           <div className="container">
             <SectionHeading
-              eyebrow="Brand portfolio"
-              title="A broad catalog that gives your company instant scale."
-              text="Use this wall as a starting point today, then replace placeholders with official brand logos over time."
-            />
+  eyebrow="Brand portfolio"
+  title="A brand portfolio that reflects our standards, partnerships, and commitment to quality."
+  text="Our brand portfolio is a core part of our identity and the foundation of our business. We take pride in building relationships with trusted, recognized brands and curating a diverse product offering that reflects quality, reliability, and market demand. Each brand we represent contributes to our ability to serve customers across multiple categories while maintaining a high standard of consistency and professionalism. At Strategic Commerce Group, our portfolio represents our commitment to long-term partnerships, responsible distribution, and sustainable growth."
+/>
             <div className="brand-grid">
               {brandWall.map((brand) => (
                 <div className="brand-chip" key={brand}>
