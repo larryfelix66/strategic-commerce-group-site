@@ -324,13 +324,22 @@ export default function App() {
   method="POST"
   autoComplete="off"
 >
-  <input type="text" name="companyName" placeholder="Company name" required autoComplete="off" />
-  <input type="text" name="contactName" placeholder="Contact name" required autoComplete="off" />
-  <input type="email" name="email" placeholder="Email address" required autoComplete="off" />
-  <input type="text" name="productLines" placeholder="Brand or product lines" autoComplete="off" />
+  <input
+    type="hidden"
+    name="_next"
+    value="https://strategic-commerce-group-site.vercel.app/#thank-you"
+  />
 
-  <input type="hidden" name="_subject" value="New Supplier Application - Strategic Commerce Group" />
-  <input type="hidden" name="_next" value="https://strategic-commerce-group-site.vercel.app/#thank-you" />
+  <input type="text" name="companyName" placeholder="Company name" required />
+  <input type="text" name="contactName" placeholder="Contact name" required />
+  <input type="email" name="email" placeholder="Email address" required />
+  <input type="text" name="productLines" placeholder="Brand or product lines" />
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Supplier Application - Strategic Commerce Group"
+  />
 
   <button className="button button-primary" type="submit">
     Submit partnership inquiry
