@@ -328,10 +328,10 @@ export default function App() {
         <section className="section" id="about">
           <div className="container">
             <SectionHeading
-              eyebrow="Procurement standards"
-              title="Authorized supply chain and procurement standards."
-              text="This is one of the strongest trust-building sections for supplier approvals, because it signals that you are not sourcing inventory through retail arbitrage or gray-market channels."
-            />
+  eyebrow="Procurement standards"
+  title="A procurement approach built on integrity, transparency, and trusted partnerships."
+  text="Our procurement standards reflect the core values of Strategic Commerce Group. We are committed to sourcing inventory exclusively through authorized distributors, manufacturers, and verified wholesale channels, ensuring authenticity, reliability, and brand alignment. Through disciplined processes, documentation, and traceability, we support responsible distribution while protecting brand integrity and building long-term supplier trust."
+/>
             <div className="grid three-up">
               <Card title="Authorized Distributor Sourcing" text="Inventory is procured from authorized distributors, manufacturers, and verified wholesale partners." />
               <Card title="Traceable Procurement" text="Our process supports documentation and traceability for supplier relationships and inventory sources." />
