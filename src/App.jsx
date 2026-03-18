@@ -22,16 +22,16 @@ const featuredBrands = [
 
 const brandWall = [
   ...featuredBrands,
-  ...Array.from({ length: 18 }, (_, i) => `Brand Partner ${i + 1}`)
+  ...Array.from({ length: 1 }, (_, i) => `Brand Partner ${i + 1}`)
 ];
 
 const catalogItems = [
-  { name: 'Medical Diagnostic Device', sku: 'SCG-1001', category: 'Medical' },
-  { name: 'Professional Hair Trimmer', sku: 'SCG-1002', category: 'Personal Care' },
-  { name: 'Digital Blood Pressure Monitor', sku: 'SCG-1003', category: 'Healthcare' },
-  { name: 'Electric Toothbrush', sku: 'SCG-1004', category: 'Oral Care' },
-  { name: 'LED Desk Lamp', sku: 'SCG-1005', category: 'Electronics' },
-  { name: 'Orthopedic Support Brace', sku: 'SCG-1006', category: 'Medical' }
+  { name: 'Medical Diagnostic Device', category: 'Medical' },
+  { name: 'Professional Hair Trimmer', category: 'Personal Care' },
+  { name: 'Digital Blood Pressure Monitor', category: 'Healthcare' },
+  { name: 'Electric Toothbrush', category: 'Oral Care' },
+  { name: 'LED Desk Lamp', category: 'Electronics' },
+  { name: 'Orthopedic Support Brace', category: 'Medical' }
 ];
 
 const complianceItems = [
