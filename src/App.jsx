@@ -317,17 +317,19 @@ export default function App() {
   title="A structured onboarding process designed to support strong, long-term supplier partnerships."
   text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution. This initial step allows us to align with manufacturers and authorized distributors, understand product lines, and establish a foundation for long-term collaboration. As our systems evolve, this process will support streamlined onboarding and ongoing partnership management."
 />
-            <div className="portal-card">
-              <div className="form-grid">
-                <input type="text" placeholder="Company name" />
-                <input type="text" placeholder="Contact name" />
-                <input type="email" placeholder="Email address" />
-                <input type="text" placeholder="Brand or product lines" />
-                <button className="button button-primary" type="button">Submit partnership inquiry</button>
-              </div>
-            </div>
-          </div>
-        </section>
+            <form
+  className="form-grid"
+  action="https://formspree.io/f/xaqpazwp"
+  method="POST"
+>
+  <input type="text" name="companyName" placeholder="Company name" required />
+  <input type="text" name="contactName" placeholder="Contact name" required />
+  <input type="email" name="email" placeholder="Email address" required />
+  <input type="text" name="productLines" placeholder="Brand or product lines" />
+  <button className="button button-primary" type="submit">
+    Submit partnership inquiry
+  </button>
+</form>
 
         <section className="section" id="about">
           <div className="container">
