@@ -313,10 +313,10 @@ export default function App() {
         <section className="section section-white" id="supplier-application">
           <div className="container narrow">
             <SectionHeading
-              eyebrow="Supplier application"
-              title="A simple intake form you can later connect to email, CRM, or a backend."
-              text="For now it functions as a polished visual section that strengthens credibility during account reviews."
-            />
+  eyebrow="Supplier application"
+  title="A structured onboarding process designed to support strong, long-term supplier partnerships."
+  text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution. This initial step allows us to align with manufacturers and authorized distributors, understand product lines, and establish a foundation for long-term collaboration. As our systems evolve, this process will support streamlined onboarding and ongoing partnership management."
+/>
             <div className="portal-card">
               <div className="form-grid">
                 <input type="text" placeholder="Company name" />
