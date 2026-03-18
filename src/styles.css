@@ -401,3 +401,8 @@ input {
   background: #eef2f7;
   transition: 0.2s ease;
 }
+
+.trust-item {
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  border: 1px solid #dbe3ec;
+}
