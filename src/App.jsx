@@ -273,10 +273,10 @@ export default function App() {
         <section className="section" id="suppliers">
           <div className="container">
             <SectionHeading
-              eyebrow="Supplier acquisition"
-              title="Pages designed to get wholesale approvals."
-              text="This messaging helps sales managers and manufacturer reps understand why partnering with Strategic Commerce Group benefits their brand."
-            />
+  eyebrow="Supplier acquisition"
+  title="A trusted distribution partner focused on long-term growth, compliance, and brand protection."
+  text="Strategic Commerce Group is committed to building long-term relationships with manufacturers and authorized distributors. We operate with a strong focus on brand integrity, compliant sourcing, and controlled distribution across all channels. By aligning with supplier expectations, maintaining transparency, and supporting responsible marketplace practices, we provide a reliable and professional partnership model that allows brands to confidently expand and grow with us."
+/>
             <div className="grid three-up">
               {whyBrandsPartner.map((item) => (
                 <Card key={item.title} title={item.title} text={item.text} />
