@@ -290,23 +290,66 @@ export default function App() {
         </section>
 
         <section className="section section-white" id="supplier-application">
-          <div className="container narrow">
-            <SectionHeading
-              eyebrow="Supplier application"
-              title="A simple intake form you can later connect to email, CRM, or a backend."
-              text="For now it functions as a polished visual section that strengthens credibility during account reviews."
-            />
-            <div className="portal-card">
-              <div className="form-grid">
-                <input type="text" placeholder="Company name" />
-                <input type="text" placeholder="Contact name" />
-                <input type="email" placeholder="Email address" />
-                <input type="text" placeholder="Brand or product lines" />
-                <button className="button button-primary" type="button">Submit partnership inquiry</button>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="container narrow">
+    <SectionHeading
+      eyebrow="Supplier application"
+      title="A structured onboarding process designed to support strong, long-term supplier partnerships."
+      text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution. This initial step allows us to align with manufacturers and authorized distributors, understand product lines, and establish a foundation for long-term collaboration. As our systems evolve, this process will support streamlined onboarding and ongoing partnership management."
+    />
+
+    <div className="portal-card">
+      <form className="form-grid" onSubmit={handleSupplierSubmit} autoComplete="off">
+        <input
+          type="text"
+          name="companyName"
+          placeholder="Company name"
+          required
+          value={supplierForm.companyName}
+          onChange={handleSupplierChange}
+        />
+        <input
+          type="text"
+          name="contactName"
+          placeholder="Contact name"
+          required
+          value={supplierForm.contactName}
+          onChange={handleSupplierChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          required
+          value={supplierForm.email}
+          onChange={handleSupplierChange}
+        />
+        <input
+          type="text"
+          name="productLines"
+          placeholder="Brand or product lines"
+          value={supplierForm.productLines}
+          onChange={handleSupplierChange}
+        />
+
+        <button className="button button-primary" type="submit">
+          Submit partnership inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{submitted && (
+  <section className="section section-white" id="thank-you">
+    <div className="container narrow">
+      <SectionHeading
+        eyebrow="Thank you"
+        title="Your partnership inquiry has been submitted."
+        text="Thank you for your interest in working with Strategic Commerce Group. Our team will review your information and follow up as appropriate."
+      />
+    </div>
+  </section>
+)}
 
         <section className="section" id="about">
           <div className="container">
