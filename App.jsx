@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 
 
+import React, { useState } from 'react';
+
 const featuredBrands = [
   'Tru',
   'Tabasco',
@@ -21,48 +23,6 @@ const featuredBrands = [
   'Seachem Prime',
   'Kanaplex'
 ];
-
-  companyName: '',
-  contactName: '',
-  email: '',
-  productLines: ''
-});
-
-
-  setSupplierForm({
-    ...supplierForm,
-    [e.target.name]: e.target.value
-  });
-};
-
-  e.preventDefault();
-
-  const response = await fetch('https://formspree.io/f/xaqpazwp', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json'
-    },
-    body: JSON.stringify(supplierForm)
-  });
-
-  if (response.ok) {
-    setSubmitted(true);
-    setSupplierForm({
-      companyName: '',
-      contactName: '',
-      email: '',
-      productLines: ''
-    });
-
-    const thankYouSection = document.getElementById('thank-you');
-    if (thankYouSection) {
-      thankYouSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  } else {
-    alert('There was a problem submitting the form. Please try again.');
-  }
-};
 
 const brandWall = [
   ...featuredBrands,
@@ -122,6 +82,72 @@ const whyBrandsPartner = [
 
 function SectionHeading({ eyebrow, title, text }) {
   return (
+    <div className="section-heading">
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+      <h2>{title}</h2>
+      {text ? <p>{text}</p> : null}
+    </div>
+  );
+}
+
+function Card({ title, text }) {
+  return (
+    <div className="card">
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+export default function App() {
+  const [supplierForm, setSupplierForm] = useState({
+    companyName: '',
+    contactName: '',
+    email: '',
+    productLines: ''
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSupplierChange = (e) => {
+    setSupplierForm({
+      ...supplierForm,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSupplierSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('https://formspree.io/f/xaqpazwp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(supplierForm)
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+      setSupplierForm({
+        companyName: '',
+        contactName: '',
+        email: '',
+        productLines: ''
+      });
+
+      const thankYouSection = document.getElementById('thank-you');
+      if (thankYouSection) {
+        thankYouSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      alert('There was a problem submitting the form. Please try again.');
+    }
+  };
+
+  return (
+    <div className="site-shell">
     <div className="section-heading">
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       <h2>{title}</h2>
