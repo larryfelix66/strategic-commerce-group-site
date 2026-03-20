@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-import React, { useState } from 'react';
-
 const featuredBrands = [
   'Tru',
   'Tabasco',
