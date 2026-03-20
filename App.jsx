@@ -142,27 +142,7 @@ export default function App() {
     }
   };
 
-  return (
-    <div className="site-shell">
-    <div className="section-heading">
-      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-      <h2>{title}</h2>
-      {text ? <p>{text}</p> : null}
-    </div>
-  );
-}
-
-function Card({ title, text }) {
-  return (
-    <div className="card">
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </div>
-  );
-}
-
-export default function App() {
-  return (
+    return (
     <div className="site-shell">
       <header className="topbar">
         <div className="container nav-wrap">
