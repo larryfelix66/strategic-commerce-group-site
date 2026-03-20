@@ -1,5 +1,27 @@
 import React, { useState } from 'react';
 
+
+
+const featuredBrands = [
+  'Tru',
+  'Tabasco',
+  'Bigelow Teas',
+  'Celestial Seasonings',
+  'Simple Mills',
+  "Mrs. Meyer's",
+  'Cetaphil',
+  'Aquaphor',
+  'Jergens',
+  "Johnson's",
+  "Dr. Bronner's",
+  'Miracle-Gro',
+  'Ortho Home Defense',
+  'Roundup',
+  'Seachem',
+  'Seachem Prime',
+  'Kanaplex'
+];
+
 const [supplierForm, setSupplierForm] = useState({
   companyName: '',
   contactName: '',
@@ -45,26 +67,6 @@ const handleSupplierSubmit = async (e) => {
     alert('There was a problem submitting the form. Please try again.');
   }
 };
-
-const featuredBrands = [
-  'Tru',
-  'Tabasco',
-  'Bigelow Teas',
-  'Celestial Seasonings',
-  'Simple Mills',
-  "Mrs. Meyer's",
-  'Cetaphil',
-  'Aquaphor',
-  'Jergens',
-  "Johnson's",
-  "Dr. Bronner's",
-  'Miracle-Gro',
-  'Ortho Home Defense',
-  'Roundup',
-  'Seachem',
-  'Seachem Prime',
-  'Kanaplex'
-];
 
 const brandWall = [
   ...featuredBrands,
