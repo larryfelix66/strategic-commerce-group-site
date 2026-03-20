@@ -125,18 +125,21 @@ export default function App() {
     });
 
     if (response.ok) {
-      setSubmitted(true);
-      setSupplierForm({
-        companyName: '',
-        contactName: '',
-        email: '',
-        productLines: ''
-      });
+  setSubmitted(true);
+  setSupplierForm({
+    companyName: '',
+    contactName: '',
+    email: '',
+    productLines: ''
+  });
 
-      const thankYouSection = document.getElementById('thank-you');
-      if (thankYouSection) {
-        thankYouSection.scrollIntoView({ behavior: 'smooth' });
-      }
+  setTimeout(() => {
+    const thankYouSection = document.getElementById('thank-you');
+    if (thankYouSection) {
+      thankYouSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 100);
+}
     } else {
       alert('There was a problem submitting the form. Please try again.');
     }
