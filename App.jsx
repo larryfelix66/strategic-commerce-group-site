@@ -22,23 +22,19 @@ const featuredBrands = [
   'Kanaplex'
 ];
 
-const [supplierForm, setSupplierForm] = useState({
   companyName: '',
   contactName: '',
   email: '',
   productLines: ''
 });
 
-const [submitted, setSubmitted] = useState(false);
 
-const handleSupplierChange = (e) => {
   setSupplierForm({
     ...supplierForm,
     [e.target.name]: e.target.value
   });
 };
 
-const handleSupplierSubmit = async (e) => {
   e.preventDefault();
 
   const response = await fetch('https://formspree.io/f/xaqpazwp', {
