@@ -164,10 +164,20 @@ return (
 
       <main>
         <section className="hero" id="home">
-          <div className="container hero-grid">
-            <div>
-              <p className="eyebrow light">National Wholesale Distribution</p>
-              <h1>Distribution infrastructure built to impress manufacturers and wholesale partners.</h1>
+  <div className="container hero-grid">
+    <div>
+
+      <img
+        src="/logo.png"
+        alt="Strategic Commerce Group"
+        className="hero-logo"
+      />
+
+      <p className="eyebrow light">National Wholesale Distribution</p>
+
+      <h1>
+        Distribution infrastructure built to impress manufacturers and wholesale partners.
+      </h1>
               <p className="hero-copy">
                 Strategic Commerce Group connects manufacturers, authorized distributors, retailers,
                 and ecommerce sellers through a professional B2B distribution model.
