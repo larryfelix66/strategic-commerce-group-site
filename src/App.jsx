@@ -232,10 +232,10 @@ return (
         <section className="section gradient-soft" id="distribution">
           <div className="container">
             <SectionHeading
-              eyebrow="Distribution network"
-              title="National reach across retail, ecommerce, and wholesale channels."
-              text="This section is built to reassure supplier reps that Strategic Commerce Group operates like a serious distribution partner."
-            />
+  eyebrow="Distribution network"
+  title="A multi-channel distribution model built to expand reach, drive sales, and support long-term growth."
+  text="Our ability to operate across retail, wholesale, and e-commerce channels is a core strength of Strategic Commerce Group. By positioning products where they perform best, we expand brand reach, increase visibility, and support consistent sales across multiple channels. This approach provides our partners with broader market access, controlled distribution, and a scalable pathway for growth, while strengthening our ability to adapt and deliver long-term value."
+/>
             <div className="grid three-up">
               <Card title="Retail Distribution" text="Supplying specialty retailers and established resellers across multiple product categories." />
               <Card title="Ecommerce Channels" text="Supporting responsible marketplace and online retail distribution with channel discipline." />
