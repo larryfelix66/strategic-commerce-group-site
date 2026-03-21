@@ -133,6 +133,27 @@ export default function App() {
       productLines: ''
     });
 
+    setTimeout(() => {
+      const thankYouSection = document.getElementById('thank-you');
+      if (thankYouSection) {
+        thankYouSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  } else {
+    alert('There was a problem submitting the form. Please try again.');
+  }
+};
+
+    setTimeout(() => {
+      const thankYouSection = document.getElementById('thank-you');
+      if (thankYouSection) {
+        thankYouSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  } else {
+    alert('There was a problem submitting the form. Please try again.');
+  }
+};
     
     setTimeout(() => {
       const thankYouSection = document.getElementById('thank-you');
