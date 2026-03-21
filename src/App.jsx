@@ -22,7 +22,7 @@ const featuredBrands = [
 
 const brandWall = [
   ...featuredBrands,
-  ...Array.from({ length: 18 }, (_, i) => `Brand Partner ${i + 1}`)
+  ...Array.from({ length: 1 }, (_, i) => `Brand Partner ${i + 1}`)
 ];
 
 const catalogItems = [
