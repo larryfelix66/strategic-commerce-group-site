@@ -302,24 +302,7 @@ return (
               <Card title="Automated Procurement" text="A structure that supports future supply chain integration and scalable purchasing workflows." />
             </div>
           </div>
-        </section>
-
-        <section className="section" id="portal">
-          <div className="container narrow">
-            <SectionHeading
-              eyebrow="Wholesale login portal"
-              title="Private customer access for approved wholesale buyers."
-              text="This portal can remain informational today and later connect to Shopify B2B, NetSuite, or another ordering platform."
-            />
-            <div className="portal-card">
-              <div className="form-grid">
-                <input type="email" placeholder="Email address" />
-                <input type="password" placeholder="Password" />
-                <button className="button button-primary" type="button">Login</button>
-              </div>
-            </div>
-          </div>
-        </section>
+        </section>        
 
         <section className="section" id="suppliers">
           <div className="container">
