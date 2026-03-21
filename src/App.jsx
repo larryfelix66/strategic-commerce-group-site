@@ -183,8 +183,7 @@ return (
                 Strategic Commerce Group connects manufacturers, authorized distributors, retailers,
                 and ecommerce sellers through a professional B2B distribution model.
               </p>
-              <div className="hero-actions">
-                <a className="button button-light" href="#portal">Open Wholesale Account</a>
+              <div className="hero-actions">                
                 <a className="button button-accent" href="#supplier-application">Become a Supplier</a>
               </div>
             </div>
