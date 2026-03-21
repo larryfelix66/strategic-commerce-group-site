@@ -291,10 +291,10 @@ return (
         <section className="section gradient-soft" id="orders">
           <div className="container">
             <SectionHeading
-              eyebrow="B2B order system"
-              title="Ordering infrastructure designed to look like a real wholesale platform."
-              text="This section creates the right perception today and can later evolve into a live portal with pricing tiers, MOQ controls, and real-time inventory."
-            />
+  eyebrow="B2B order system"
+  title="Modern ordering infrastructure powered by scalable technology and efficient workflows."
+  text="Strategic Commerce Group utilizes modern B2B ordering methods and evolving technology to create a seamless purchasing experience for our partners. Our infrastructure supports scalable order management, streamlined procurement, and flexible purchasing, while improving accuracy and fulfillment speed. As our platform continues to advance, we are focused on integrating real-time inventory, tiered pricing, and automated workflows to deliver a reliable and efficient wholesale ordering experience."
+/>
             <div className="grid four-up">
               <Card title="Wholesale Pricing" text="Tiered B2B pricing based on customer account structure and order volume." />
               <Card title="Case and Pallet Orders" text="Bulk ordering options for retailers, distributors, and larger procurement partners." />
