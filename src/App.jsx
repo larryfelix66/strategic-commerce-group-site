@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const featuredBrands = [
   'Tru',
@@ -22,16 +22,16 @@ const featuredBrands = [
 
 const brandWall = [
   ...featuredBrands,
-  ...Array.from({ length: 1 }, (_, i) => `Brand Partner ${i + 1}`)
+  ...Array.from({ length: 133 }, (_, i) => `Brand Partner ${i + 1}`)
 ];
 
 const catalogItems = [
-  { name: 'Medical Diagnostic Device', category: 'Medical' },
-  { name: 'Professional Hair Trimmer', category: 'Personal Care' },
-  { name: 'Digital Blood Pressure Monitor', category: 'Healthcare' },
-  { name: 'Electric Toothbrush', category: 'Oral Care' },
-  { name: 'LED Desk Lamp', category: 'Electronics' },
-  { name: 'Orthopedic Support Brace', category: 'Medical' }
+  { name: 'Medical Diagnostic Device', sku: 'SCG-1001', category: 'Medical' },
+  { name: 'Professional Hair Trimmer', sku: 'SCG-1002', category: 'Personal Care' },
+  { name: 'Digital Blood Pressure Monitor', sku: 'SCG-1003', category: 'Healthcare' },
+  { name: 'Electric Toothbrush', sku: 'SCG-1004', category: 'Oral Care' },
+  { name: 'LED Desk Lamp', sku: 'SCG-1005', category: 'Electronics' },
+  { name: 'Orthopedic Support Brace', sku: 'SCG-1006', category: 'Medical' }
 ];
 
 const complianceItems = [
@@ -96,7 +96,55 @@ function Card({ title, text }) {
 }
 
 export default function App() {
-  return (
+  const [supplierForm, setSupplierForm] = useState({
+  companyName: '',
+  contactName: '',
+  email: '',
+  productLines: ''
+});
+
+const [submitted, setSubmitted] = useState(false);
+
+const handleSupplierChange = (e) => {
+  setSupplierForm({
+    ...supplierForm,
+    [e.target.name]: e.target.value
+  });
+};
+
+const handleSupplierSubmit = async (e) => {
+  e.preventDefault();
+
+  const response = await fetch('https://formspree.io/f/xaqpazwp', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: JSON.stringify(supplierForm)
+  });
+
+  if (response.ok) {
+    setSubmitted(true);
+    setSupplierForm({
+      companyName: '',
+      contactName: '',
+      email: '',
+      productLines: ''
+    });
+
+    setTimeout(() => {
+      const thankYouSection = document.getElementById('thank-you');
+      if (thankYouSection) {
+        thankYouSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  } else {
+    alert('There was a problem submitting the form. Please try again.');
+  }
+};
+
+return (
     <div className="site-shell">
       <header className="topbar">
         <div className="container nav-wrap">
@@ -118,21 +166,12 @@ export default function App() {
         <section className="hero" id="home">
           <div className="container hero-grid">
             <div>
-              
-              <img
-        src="/logo.png"
-        alt="Strategic Commerce Group"
-        className="hero-logo"
-      />           
-             
-           
               <p className="eyebrow light">National Wholesale Distribution</p>
-
-<h1>Delivering value through reliable supply, trusted partnerships, and scalable distribution.</h1>
-
-<p className="hero-copy">
-  Strategic Commerce Group delivers value by providing dependable access to quality inventory, streamlined procurement, and professional distribution support. Our focus is to help customers and partners improve efficiency, strengthen supply continuity, and grow with confidence through a responsive B2B distribution model.
-</p>
+              <h1>Distribution infrastructure built to impress manufacturers and wholesale partners.</h1>
+              <p className="hero-copy">
+                Strategic Commerce Group connects manufacturers, authorized distributors, retailers,
+                and ecommerce sellers through a professional B2B distribution model.
+              </p>
               <div className="hero-actions">
                 <a className="button button-light" href="#portal">Open Wholesale Account</a>
                 <a className="button button-accent" href="#supplier-application">Become a Supplier</a>
@@ -163,10 +202,10 @@ export default function App() {
         <section className="section" id="brands">
           <div className="container">
             <SectionHeading
-  eyebrow="Brand portfolio"
-  title="A brand portfolio that reflects our standards, partnerships, and commitment to quality."
-  text="Our brand portfolio is a core part of our identity and the foundation of our business. We take pride in building relationships with trusted, recognized brands and curating a diverse product offering that reflects quality, reliability, and market demand. Each brand we represent contributes to our ability to serve customers across multiple categories while maintaining a high standard of consistency and professionalism. At Strategic Commerce Group, our portfolio represents our commitment to long-term partnerships, responsible distribution, and sustainable growth."
-/>
+              eyebrow="Brand portfolio"
+              title="A broad catalog that gives your company instant scale."
+              text="Use this wall as a starting point today, then replace placeholders with official brand logos over time."
+            />
             <div className="brand-grid">
               {brandWall.map((brand) => (
                 <div className="brand-chip" key={brand}>
@@ -181,10 +220,10 @@ export default function App() {
         <section className="section gradient-soft" id="distribution">
           <div className="container">
             <SectionHeading
-  eyebrow="Distribution network"
-  title="A multi-channel distribution model built to expand reach, drive sales, and support long-term growth."
-  text="Our ability to operate across retail, wholesale, and e-commerce channels is a core strength of Strategic Commerce Group. By positioning products where they perform best, we expand brand reach, increase visibility, and support consistent sales across multiple channels. This approach provides our partners with broader market access, controlled distribution, and a scalable pathway for growth, while strengthening our ability to adapt and deliver long-term value."
-/>
+              eyebrow="Distribution network"
+              title="National reach across retail, ecommerce, and wholesale channels."
+              text="This section is built to reassure supplier reps that Strategic Commerce Group operates like a serious distribution partner."
+            />
             <div className="grid three-up">
               <Card title="Retail Distribution" text="Supplying specialty retailers and established resellers across multiple product categories." />
               <Card title="Ecommerce Channels" text="Supporting responsible marketplace and online retail distribution with channel discipline." />
@@ -198,27 +237,27 @@ export default function App() {
         </section>
 
         <section className="section" id="compliance">
-  <div className="container">
-    <SectionHeading
-      eyebrow="Trust and compliance"
-      title="Trust and compliance are the foundation of every supplier relationship we build."
-      text="Strategic Commerce Group operates with a strict commitment to sourcing products exclusively through authorized distributors, manufacturers, and verified wholesale channels. We maintain clear procurement documentation, uphold MAP and brand policy standards, and prioritize responsible marketplace representation to protect brand integrity. Our processes are designed to align with manufacturer expectations, ensuring transparency, consistency, and accountability across every transaction. By maintaining high compliance standards and a long-term partnership approach, we position ourselves as a reliable and trusted distribution partner—making it easy for brands and suppliers to confidently approve and grow with us."
-    />
-    <div className="grid three-up">
-      {complianceItems.map((item) => (
-        <Card key={item.title} title={item.title} text={item.text} />
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="container">
+            <SectionHeading
+              eyebrow="Trust and compliance"
+              title="Distribution standards that help brands feel safe approving your account."
+              text="These are the exact signals many manufacturers and authorized distributors look for when they review a prospective wholesale partner."
+            />
+            <div className="grid three-up">
+              {complianceItems.map((item) => (
+                <Card key={item.title} title={item.title} text={item.text} />
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="section section-white" id="catalog">
           <div className="container">
             <SectionHeading
-  eyebrow="Product catalog"
-  title="A growing catalog built to support scale, consistency, and market expansion."
-  text="Our product catalog reflects the continued growth of Strategic Commerce Group. We are focused on building a diverse, high-quality selection of products sourced through trusted channels, allowing us to meet the evolving needs of our customers and partners. As our catalog expands, so does our ability to strengthen market presence, support scalable distribution, and deliver reliable supply across retail, wholesale, and e-commerce channels."
-/>
+              eyebrow="Product catalog"
+              title="A wholesale catalog structure that looks enterprise-ready."
+              text="Catalog access can remain gated until you are ready to launch a live customer portal later."
+            />
             <div className="catalog-grid">
               {catalogItems.map((item) => (
                 <div className="catalog-card" key={item.sku}>
@@ -240,10 +279,10 @@ export default function App() {
         <section className="section gradient-soft" id="orders">
           <div className="container">
             <SectionHeading
-  eyebrow="B2B order system"
-  title="Modern ordering infrastructure powered by scalable technology and efficient workflows."
-  text="Strategic Commerce Group utilizes modern B2B ordering methods and evolving technology to create a seamless purchasing experience for our partners. Our infrastructure supports scalable order management, streamlined procurement, and flexible purchasing, while improving accuracy and fulfillment speed. As our platform continues to advance, we are focused on integrating real-time inventory, tiered pricing, and automated workflows to deliver a reliable and efficient wholesale ordering experience."
-/>
+              eyebrow="B2B order system"
+              title="Ordering infrastructure designed to look like a real wholesale platform."
+              text="This section creates the right perception today and can later evolve into a live portal with pricing tiers, MOQ controls, and real-time inventory."
+            />
             <div className="grid four-up">
               <Card title="Wholesale Pricing" text="Tiered B2B pricing based on customer account structure and order volume." />
               <Card title="Case and Pallet Orders" text="Bulk ordering options for retailers, distributors, and larger procurement partners." />
@@ -273,18 +312,10 @@ export default function App() {
         <section className="section" id="suppliers">
           <div className="container">
             <SectionHeading
-  eyebrow="Supplier acquisition"
-  title="A trusted distribution partner focused on long-term growth, compliance, and brand protection."
-  text="Strategic Commerce Group is committed to building long-term relationships with manufacturers and authorized distributors. We operate with a strong focus on brand integrity, compliant sourcing, and controlled distribution across all channels. By aligning with supplier expectations, maintaining transparency, and supporting responsible marketplace practices, we provide a reliable and professional partnership model that allows brands to confidently expand and grow with us."
-/>
-            <div className="trust-bar">
-  <div className="trust-item">✔ Authorized Distributor Sourcing</div>
-  <div className="trust-item">✔ MAP Policy Compliant</div>
-  <div className="trust-item">✔ Brand Protection Focused</div>
-  <div className="trust-item">✔ Transparent Procurement</div>
-  <div className="trust-item">✔ Scalable Distribution Network</div>
-  <div className="trust-item">✔ Long-Term Partnership Approach</div>
-</div>
+              eyebrow="Supplier acquisition"
+              title="Pages designed to get wholesale approvals."
+              text="This messaging helps sales managers and manufacturer reps understand why partnering with Strategic Commerce Group benefits their brand."
+            />
             <div className="grid three-up">
               {whyBrandsPartner.map((item) => (
                 <Card key={item.title} title={item.title} text={item.text} />
@@ -297,14 +328,10 @@ export default function App() {
           <div className="container hero-mini-grid">
             <div>
               <p className="eyebrow light">Become a distribution partner</p>
-
-<h2>
-  Partner with a distribution network built for growth, compliance, and long-term brand value.
-</h2>
-
-<p>
-  Strategic Commerce Group works with manufacturers and authorized distributors to responsibly expand product reach across retail, wholesale, and e-commerce channels. Our focus on brand protection, transparent operations, and controlled growth allows us to serve as a reliable extension of your distribution strategy.
-</p>
+              <h2>Professional positioning for manufacturers, importers, and authorized distributors.</h2>
+              <p>
+                Strategic Commerce Group is structured to look like a long-term distribution partner with a focus on responsible channel growth.
+              </p>
             </div>
             <a className="button button-light" href="#supplier-application">Apply for partnership</a>
           </div>
@@ -318,53 +345,67 @@ export default function App() {
       text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution. This initial step allows us to align with manufacturers and authorized distributors, understand product lines, and establish a foundation for long-term collaboration. As our systems evolve, this process will support streamlined onboarding and ongoing partnership management."
     />
 
-    <form
-  className="form-grid"
-  action="https://formspree.io/f/xaqpazwp"
-  method="POST"
-  autoComplete="off"
->
-  <input
-    type="hidden"
-    name="_next"
-    value="https://strategic-commerce-group-site.vercel.app/#thank-you"
-  />
+    <div className="portal-card">
+      <form className="form-grid" onSubmit={handleSupplierSubmit} autoComplete="off">
+        <input
+          type="text"
+          name="companyName"
+          placeholder="Company name"
+          required
+          value={supplierForm.companyName}
+          onChange={handleSupplierChange}
+        />
+        <input
+          type="text"
+          name="contactName"
+          placeholder="Contact name"
+          required
+          value={supplierForm.contactName}
+          onChange={handleSupplierChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          required
+          value={supplierForm.email}
+          onChange={handleSupplierChange}
+        />
+        <input
+          type="text"
+          name="productLines"
+          placeholder="Brand or product lines"
+          value={supplierForm.productLines}
+          onChange={handleSupplierChange}
+        />
 
-  <input type="text" name="companyName" placeholder="Company name" required />
-  <input type="text" name="contactName" placeholder="Contact name" required />
-  <input type="email" name="email" placeholder="Email address" required />
-  <input type="text" name="productLines" placeholder="Brand or product lines" />
-
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Supplier Application - Strategic Commerce Group"
-  />
-
-  <button className="button button-primary" type="submit">
-    Submit partnership inquiry
-  </button>
-</form>
+        <button className="button button-primary" type="submit">
+          Submit partnership inquiry
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
-        <section className="section section-white" id="thank-you">
-  <div className="container narrow">
-    <SectionHeading
-      eyebrow="Thank you"
-      title="Your partnership inquiry has been submitted."
-      text="Thank you for your interest in working with Strategic Commerce Group. Our team will review your information and follow up as appropriate."
-    />
-  </div>
-</section>
+{submitted && (
+  <section className="section section-white" id="thank-you">
+    <div className="container narrow">
+      <SectionHeading
+        eyebrow="Thank you"
+        title="Your partnership inquiry has been submitted."
+        text="Thank you for your interest in working with Strategic Commerce Group. Our team will review your information and follow up as appropriate."
+      />
+    </div>
+  </section>
+)}
 
         <section className="section" id="about">
           <div className="container">
             <SectionHeading
-  eyebrow="Procurement standards"
-  title="A procurement approach built on integrity, transparency, and trusted partnerships."
-  text="Our procurement standards reflect the core values of Strategic Commerce Group. We are committed to sourcing inventory exclusively through authorized distributors, manufacturers, and verified wholesale channels, ensuring authenticity, reliability, and brand alignment. Through disciplined processes, documentation, and traceability, we support responsible distribution while protecting brand integrity and building long-term supplier trust."
-/>
+              eyebrow="Procurement standards"
+              title="Authorized supply chain and procurement standards."
+              text="This is one of the strongest trust-building sections for supplier approvals, because it signals that you are not sourcing inventory through retail arbitrage or gray-market channels."
+            />
             <div className="grid three-up">
               <Card title="Authorized Distributor Sourcing" text="Inventory is procured from authorized distributors, manufacturers, and verified wholesale partners." />
               <Card title="Traceable Procurement" text="Our process supports documentation and traceability for supplier relationships and inventory sources." />
