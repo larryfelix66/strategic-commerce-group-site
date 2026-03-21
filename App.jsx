@@ -97,22 +97,22 @@ function Card({ title, text }) {
 
 export default function App() {
   const [supplierForm, setSupplierForm] = useState({
-    companyName: '',
-    contactName: '',
-    email: '',
-    productLines: ''
+  companyName: '',
+  contactName: '',
+  email: '',
+  productLines: ''
+});
+
+const [submitted, setSubmitted] = useState(false);
+
+const handleSupplierChange = (e) => {
+  setSupplierForm({
+    ...supplierForm,
+    [e.target.name]: e.target.value
   });
+};
 
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSupplierChange = (e) => {
-    setSupplierForm({
-      ...supplierForm,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSupplierSubmit = async (e) => {
+const handleSupplierSubmit = async (e) => {
   e.preventDefault();
 
   const response = await fetch('https://formspree.io/f/xaqpazwp', {
@@ -144,29 +144,7 @@ export default function App() {
   }
 };
 
-    setTimeout(() => {
-      const thankYouSection = document.getElementById('thank-you');
-      if (thankYouSection) {
-        thankYouSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  } else {
-    alert('There was a problem submitting the form. Please try again.');
-  }
-};
-    
-    setTimeout(() => {
-      const thankYouSection = document.getElementById('thank-you');
-      if (thankYouSection) {
-        thankYouSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  } else {
-    alert('There was a problem submitting the form. Please try again.');
-  }
-};
-
-    return (
+return (
     <div className="site-shell">
       <header className="topbar">
         <div className="container nav-wrap">
