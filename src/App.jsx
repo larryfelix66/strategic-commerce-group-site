@@ -323,6 +323,14 @@ return (
 
         <section className="section" id="suppliers">
           <div className="container">
+            <div className="trust-bar">
+  <div className="trust-item">✔ Authorized Distributor Sourcing</div>
+  <div className="trust-item">✔ MAP Policy Compliant</div>
+  <div className="trust-item">✔ Brand Protection Focused</div>
+  <div className="trust-item">✔ Transparent Procurement</div>
+  <div className="trust-item">✔ Scalable Distribution Network</div>
+  <div className="trust-item">✔ Long-Term Partnership Approach</div>
+</div>
                        <SectionHeading
   eyebrow="Supplier acquisition"
   title="A trusted distribution partner focused on long-term growth, compliance, and brand protection."
