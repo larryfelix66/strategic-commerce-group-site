@@ -165,7 +165,6 @@ return (
         <section className="hero" id="home">
   <div className="container hero-grid">
     <div>
-
       <img
         src="/logo.png"
         alt="Strategic Commerce Group"
@@ -174,31 +173,35 @@ return (
 
       <p className="eyebrow light">National Wholesale Distribution</p>
 
-<h1>Delivering value through reliable supply, trusted partnerships, and scalable distribution.</h1>
+      <h1>
+        Delivering value through reliable supply, trusted partnerships, and scalable distribution.
+      </h1>
 
-<p className="hero-copy">
-  Strategic Commerce Group delivers value by providing dependable access to quality inventory, streamlined procurement, and professional distribution support. Our focus is to help customers and partners improve efficiency, strengthen supply continuity, and grow with confidence through a responsive B2B distribution model.
-</p>
-              <p className="hero-copy">
-                Strategic Commerce Group connects manufacturers, authorized distributors, retailers,
-                and ecommerce sellers through a professional B2B distribution model.
-              </p>
-              <div className="hero-actions">                
-                <a className="button button-accent" href="#supplier-application">Become a Supplier</a>
-              </div>
-            </div>
-            <div className="hero-panel">
-              <h3>Distribution Overview</h3>
-              <ul>
-                <li>150+ brand partnerships</li>
-                <li>5,000+ active SKUs</li>
-                <li>Nationwide B2B distribution</li>
-                <li>Retail and ecommerce supply</li>
-                <li>Procurement and fulfillment solutions</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+      <p className="hero-copy">
+        Strategic Commerce Group provides dependable access to quality inventory, streamlined procurement,
+        and professional distribution support. Our focus is to help customers and partners improve efficiency,
+        strengthen supply continuity, and grow with confidence through a responsive B2B distribution model.
+      </p>
+
+      <div className="hero-actions">
+        <a className="button button-accent" href="#supplier-application">
+          Become a Supplier
+        </a>
+      </div>
+    </div>
+
+    <div className="hero-panel">
+      <h3>Distribution Overview</h3>
+      <ul>
+        <li>150+ brand partnerships</li>
+        <li>5,000+ active SKUs</li>
+        <li>Nationwide B2B distribution</li>
+        <li>Retail and ecommerce supply</li>
+        <li>Procurement and fulfillment solutions</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
         <section className="stats-section">
           <div className="container stats-grid">
