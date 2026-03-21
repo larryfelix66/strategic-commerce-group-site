@@ -113,18 +113,6 @@ export default function App() {
   };
 
   const handleSupplierSubmit = async (e) => {
-    e.preventDefault();
-
-    const response = await fetch('https://formspree.io/f/xaqpazwp', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      },
-      body: JSON.stringify(supplierForm)
-    });
-
-    const handleSupplierSubmit = async (e) => {
   e.preventDefault();
 
   const response = await fetch('https://formspree.io/f/xaqpazwp', {
@@ -144,6 +132,17 @@ export default function App() {
       email: '',
       productLines: ''
     });
+
+    setTimeout(() => {
+      const thankYouSection = document.getElementById('thank-you');
+      if (thankYouSection) {
+        thankYouSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  } else {
+    alert('There was a problem submitting the form. Please try again.');
+  }
+};
 
     setTimeout(() => {
       const thankYouSection = document.getElementById('thank-you');
