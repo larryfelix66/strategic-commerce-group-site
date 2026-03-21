@@ -347,26 +347,58 @@ return (
     <SectionHeading
       eyebrow="Supplier application"
       title="A structured onboarding process designed to support strong, long-term supplier partnerships."
-      text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution. This initial step allows us to align with manufacturers and authorized distributors, understand product lines, and establish a foundation for long-term collaboration. As our systems evolve, this process will support streamlined onboarding and ongoing partnership management."
+      text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution."
     />
 
-    <form
-      className="form-grid"
-      action="https://formspree.io/f/xaqpazwp"
-      method="POST"
-    >
-      <input type="text" name="companyName" placeholder="Company name" required />
-      <input type="text" name="contactName" placeholder="Contact name" required />
-      <input type="email" name="email" placeholder="Email address" required />
-      <input type="text" name="productLines" placeholder="Brand or product lines" />
+    <div className="portal-card">
+      {submitted ? (
+        <div id="thank-you">
+          <h3>Your partnership inquiry has been submitted.</h3>
+          <p>
+            Thank you for your interest in working with Strategic Commerce Group.
+            Our team will review your information and follow up as appropriate.
+          </p>
+        </div>
+      ) : (
+        <form className="form-grid" onSubmit={handleSupplierSubmit}>
+          <input
+            type="text"
+            name="companyName"
+            placeholder="Company name"
+            required
+            value={supplierForm.companyName}
+            onChange={handleSupplierChange}
+          />
+          <input
+            type="text"
+            name="contactName"
+            placeholder="Contact name"
+            required
+            value={supplierForm.contactName}
+            onChange={handleSupplierChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            required
+            value={supplierForm.email}
+            onChange={handleSupplierChange}
+          />
+          <input
+            type="text"
+            name="productLines"
+            placeholder="Brand or product lines"
+            value={supplierForm.productLines}
+            onChange={handleSupplierChange}
+          />
 
-      <input type="hidden" name="_subject" value="New Supplier Application - Strategic Commerce Group" />
-      <input type="hidden" name="_next" value="https://strategic-commerce-group-site.vercel.app/" />
-
-      <button className="button button-primary" type="submit">
-        Submit partnership inquiry
-      </button>
-    </form>
+          <button className="button button-primary" type="submit">
+            Submit partnership inquiry
+          </button>
+        </form>
+      )}
+    </div>
   </div>
 </section>
         <button className="button button-primary" type="submit">
