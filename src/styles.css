@@ -378,6 +378,7 @@ input {
   width: 220px;
   margin-bottom: 25px;
   display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
 }
 
 .trust-bar {
