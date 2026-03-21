@@ -375,9 +375,9 @@ input {
 }
 
 .hero-logo {
-  width: 600px;
-  max-width: 100%;
-  margin-bottom: 40px;
+  width: 220px;
+  margin-bottom: 25px;
+  display: block;
 }
 
 .trust-bar {
