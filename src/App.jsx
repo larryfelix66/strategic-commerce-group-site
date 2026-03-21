@@ -348,10 +348,14 @@ return (
           <div className="container hero-mini-grid">
             <div>
               <p className="eyebrow light">Become a distribution partner</p>
-              <h2>Professional positioning for manufacturers, importers, and authorized distributors.</h2>
-              <p>
-                Strategic Commerce Group is structured to look like a long-term distribution partner with a focus on responsible channel growth.
-              </p>
+
+<h2>
+  Partner with a distribution network built for growth, compliance, and long-term brand value.
+</h2>
+
+<p>
+  Strategic Commerce Group works with manufacturers and authorized distributors to responsibly expand product reach across retail, wholesale, and e-commerce channels. Our focus on brand protection, transparent operations, and controlled growth allows us to serve as a reliable extension of your distribution strategy.
+</p>
             </div>
             <a className="button button-light" href="#supplier-application">Apply for partnership</a>
           </div>
