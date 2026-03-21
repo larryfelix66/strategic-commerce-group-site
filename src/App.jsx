@@ -266,10 +266,10 @@ return (
         <section className="section section-white" id="catalog">
           <div className="container">
             <SectionHeading
-              eyebrow="Product catalog"
-              title="A wholesale catalog structure that looks enterprise-ready."
-              text="Catalog access can remain gated until you are ready to launch a live customer portal later."
-            />
+  eyebrow="Product catalog"
+  title="A growing catalog built to support scale, consistency, and market expansion."
+  text="Our product catalog reflects the continued growth of Strategic Commerce Group. We are focused on building a diverse, high-quality selection of products sourced through trusted channels, allowing us to meet the evolving needs of our customers and partners. As our catalog expands, so does our ability to strengthen market presence, support scalable distribution, and deliver reliable supply across retail, wholesale, and e-commerce channels."
+/>
             <div className="catalog-grid">
               {catalogItems.map((item) => (
                 <div className="catalog-card" key={item.sku}>
