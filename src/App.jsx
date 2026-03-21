@@ -175,9 +175,11 @@ return (
 
       <p className="eyebrow light">National Wholesale Distribution</p>
 
-      <h1>
-        Distribution infrastructure built to impress manufacturers and wholesale partners.
-      </h1>
+<h1>Delivering value through reliable supply, trusted partnerships, and scalable distribution.</h1>
+
+<p className="hero-copy">
+  Strategic Commerce Group delivers value by providing dependable access to quality inventory, streamlined procurement, and professional distribution support. Our focus is to help customers and partners improve efficiency, strengthen supply continuity, and grow with confidence through a responsive B2B distribution model.
+</p>
               <p className="hero-copy">
                 Strategic Commerce Group connects manufacturers, authorized distributors, retailers,
                 and ecommerce sellers through a professional B2B distribution model.
