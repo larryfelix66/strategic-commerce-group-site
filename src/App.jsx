@@ -174,18 +174,23 @@ return (
       <p className="eyebrow light">National Wholesale Distribution</p>
 
       <h1>
-        Delivering value through reliable supply, trusted partnerships, and scalable distribution.
+        Reliable supply. Trusted partnerships. Scalable distribution.
       </h1>
 
       <p className="hero-copy">
-        Strategic Commerce Group provides dependable access to quality inventory, streamlined procurement,
-        and professional distribution support. Our focus is to help customers and partners improve efficiency,
-        strengthen supply continuity, and grow with confidence through a responsive B2B distribution model.
+        Strategic Commerce Group provides dependable access to quality inventory,
+        streamlined procurement, and professional distribution support.
+        We help brands, retailers, and partners improve efficiency,
+        strengthen supply continuity, and scale with confidence.
       </p>
 
       <div className="hero-actions">
         <a className="button button-accent" href="#supplier-application">
           Become a Supplier
+        </a>
+
+        <a className="button button-outline" href="#distribution">
+          View Distribution Model
         </a>
       </div>
     </div>
