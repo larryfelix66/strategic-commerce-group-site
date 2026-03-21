@@ -388,8 +388,8 @@ input {
 }
 
 .trust-item {
-  background: #f5f7fa;
-  border: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  border: 1px solid #dbe3ec;
   padding: 14px 16px;
   border-radius: 8px;
   font-weight: 500;
