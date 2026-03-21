@@ -400,26 +400,7 @@ return (
       )}
     </div>
   </div>
-</section>
-        <button className="button button-primary" type="submit">
-          Submit partnership inquiry
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-{submitted && (
-  <section className="section section-white" id="thank-you">
-    <div className="container narrow">
-      <SectionHeading
-        eyebrow="Thank you"
-        title="Your partnership inquiry has been submitted."
-        text="Thank you for your interest in working with Strategic Commerce Group. Our team will review your information and follow up as appropriate."
-      />
-    </div>
-  </section>
-)}
+</section>       
 
         <section className="section" id="about">
           <div className="container">
