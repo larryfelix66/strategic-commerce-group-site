@@ -157,8 +157,7 @@ return (
             <a href="#catalog">Catalog</a>
             <a href="#distribution">Distribution</a>
             <a href="#suppliers">Suppliers</a>
-            <a href="#portal">Wholesale Login</a>
-          </nav>
+            </nav>
         </div>
       </header>
 
