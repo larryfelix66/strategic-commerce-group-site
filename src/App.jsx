@@ -424,24 +424,31 @@ return (
             </div>
           </div>
         </section>
-      </main>
+            </main>
 
       <footer className="footer">
         <div className="container footer-wrap">
           <div>
-            <img className="footer-logo" src="/logo.png" alt="Strategic Commerce Group logo" />
+            <img
+              className="footer-logo"
+              src="/logo.png"
+              alt="Strategic Commerce Group logo"
+            />
             <p>Strategic Commerce Group</p>
           </div>
-          <div>
-  <p>strategiccommercegroup.com</p>
-  <p>National wholesale distribution and commerce infrastructure.</p>
 
-  <p>
-    Phone:{' '}
-    <a href="tel:14809155598" className="footer-link">
-      (480) 915-5598
-    </a>
-  </p>
-</div>
+          <div>
+            <p>strategiccommercegroup.com</p>
+            <p>National wholesale distribution and commerce infrastructure.</p>
+            <p>
+              Phone:{' '}
+              <a href="tel:14809155598" className="footer-link">
+                (480) 915-5598
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
