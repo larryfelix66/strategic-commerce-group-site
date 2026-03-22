@@ -106,7 +106,8 @@ button, input { font: inherit; }
     radial-gradient(circle at bottom right, rgba(255,255,255,0.10), transparent 22%),
     linear-gradient(120deg, #0f4fb8 0%, #1670df 38%, #f47c1b 100%);
   color: #fff;
-  padding: 110px 0 96px;
+  padding: 80px 0 90px;
+  margin-top: -10px;
 }
 .hero-grid {
   display: grid;
