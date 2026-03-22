@@ -109,9 +109,9 @@ button, input { font: inherit; }
   align-items: center;
 }
 .hero-logo {
-  width: 240px;        
-  margin-bottom: 25px;
-  display: block;
+  width: 520px;
+  max-width: 95%;
+  margin-bottom: 35px;
 }
 
 .hero h1 {
