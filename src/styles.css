@@ -454,7 +454,7 @@ input {
   align-items: center;
 }
 .footer-wrap p {
-  margin: 4px 0;
+ margin: 6px 0;
   color: var(--muted);
 }
 .footer-logo {
