@@ -278,12 +278,7 @@ return (
 />
             <div className="catalog-grid">
               {catalogItems.map((item) => (
-                <div className="catalog-card" key={item.sku}>
-                  <span className="pill">{item.category}</span>
-                  <h3>{item.name}</h3>
-                  <p>SKU: {item.sku}</p>
-                  <a className="button button-outline" href="#catalog-request">View details</a>
-                </div>
+                <div className="catalog-card" key={item.sku}> <span className="pill">{item.category}</span> <h3>{item.name}</h3> <p>{item.description}</p> </div>
               ))}
             </div>
             <div className="catalog-request" id="catalog-request">
