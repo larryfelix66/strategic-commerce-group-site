@@ -296,15 +296,6 @@ button, input { font: inherit; }
   font-weight: 800;
   cursor: pointer;
 }
-.button-light {
-  background: #fff;
-  color: var(--blue-dark);
-}
-.button-accent {
-  background: rgba(255,255,255,0.16);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.35);
-}
 .button-primary {
   background: linear-gradient(135deg, var(--blue), var(--orange));
   color: #fff;
