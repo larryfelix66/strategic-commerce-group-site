@@ -109,24 +109,27 @@ button, input { font: inherit; }
   gap: 28px;
   align-items: center;
 }
+.hero-logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
 .hero h1 {
-  margin: 0;
-  font-size: clamp(2.7rem, 6vw, 4.7rem);
-  line-height: 0.98;
-  max-width: 10.5ch;
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
+
 .hero-copy {
-  max-width: 60ch;
-  font-size: 1.12rem;
-  line-height: 1.8;
-  color: rgba(255,255,255,0.92);
-  margin: 18px 0 0;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
 }
+
 .hero-actions {
+  margin-top: 25px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
+  gap: 12px;
 }
 .hero-panel,
 .portal-card,
@@ -384,14 +387,6 @@ input {
     padding-top: 60px;
   }
 }
-
-.hero-logo {
-  width: 220px;
-  margin-bottom: 25px;
-  display: block;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
-}
-
 .trust-bar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
