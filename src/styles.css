@@ -336,8 +336,10 @@ input {
   color: var(--muted);
 }
 .footer-logo {
-  width: 60px;
+  width: 160px;
+  height: auto;
   margin-bottom: 10px;
+  opacity: 0.95;
 }
 .footer-link {
   color: inherit;
