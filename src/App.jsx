@@ -164,7 +164,7 @@ return (
       <main>
         <section className="hero" id="home">
   <div className="container hero-grid">
-    <div>
+    <div className="hero-content">
       <img
         src="/logo.png"
         alt="Strategic Commerce Group"
@@ -174,35 +174,61 @@ return (
       <p className="eyebrow light">National Wholesale Distribution</p>
 
       <h1>
-        Reliable supply. Trusted partnerships. Scalable distribution.
+        Strategic distribution infrastructure built for growth, compliance, and long-term supply partnerships.
       </h1>
 
       <p className="hero-copy">
-        Strategic Commerce Group provides dependable access to quality inventory,
-        streamlined procurement, and professional distribution support.
-        We help brands, retailers, and partners improve efficiency,
-        strengthen supply continuity, and scale with confidence.
+        Strategic Commerce Group supports manufacturers, authorized distributors,
+        retailers, and ecommerce partners through dependable procurement,
+        controlled distribution, and scalable B2B supply solutions.
       </p>
 
       <div className="hero-actions">
+        <a className="button button-light" href="#distribution">
+          View Distribution Model
+        </a>
         <a className="button button-accent" href="#supplier-application">
           Become a Supplier
         </a>
+      </div>
 
-        <a className="button button-outline" href="#distribution">
-          View Distribution Model
-        </a>
+      <div className="hero-trust-row">
+        <span>Authorized sourcing</span>
+        <span>MAP-conscious distribution</span>
+        <span>Nationwide B2B reach</span>
       </div>
     </div>
 
-    <div className="hero-panel">
-      <h3>Distribution Overview</h3>
-      <ul>
-        <li>150+ brand partnerships</li>
-        <li>5,000+ active SKUs</li>
-        <li>Nationwide B2B distribution</li>
-        <li>Retail and ecommerce supply</li>
-        <li>Procurement and fulfillment solutions</li>
+    <div className="hero-panel hero-panel-premium">
+      <p className="hero-panel-label">Operational Snapshot</p>
+      <h3>Built to support modern wholesale growth.</h3>
+
+      <div className="hero-metrics">
+        <div className="hero-metric">
+          <strong>150+</strong>
+          <span>Brand relationships</span>
+        </div>
+        <div className="hero-metric">
+          <strong>5,000+</strong>
+          <span>Active SKUs</span>
+        </div>
+        <div className="hero-metric">
+          <strong>B2B</strong>
+          <span>Wholesale focus</span>
+        </div>
+        <div className="hero-metric">
+          <strong>U.S.</strong>
+          <span>Distribution reach</span>
+        </div>
+      </div>
+
+      <div className="hero-panel-divider" />
+
+      <ul className="hero-panel-list">
+        <li>Authorized distributor sourcing</li>
+        <li>Professional procurement workflows</li>
+        <li>Retail, wholesale, and ecommerce support</li>
+        <li>Scalable supply chain infrastructure</li>
       </ul>
     </div>
   </div>
