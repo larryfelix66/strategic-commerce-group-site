@@ -26,53 +26,53 @@ const brandWall = [
 ];
 
 const catalogItems = [
-  { name: 'Medical Diagnostic Device', sku: 'SCG-1001', category: 'Medical' },
-  { name: 'Professional Hair Trimmer', sku: 'SCG-1002', category: 'Personal Care' },
-  { name: 'Digital Blood Pressure Monitor', sku: 'SCG-1003', category: 'Healthcare' },
-  { name: 'Electric Toothbrush', sku: 'SCG-1004', category: 'Oral Care' },
-  { name: 'LED Desk Lamp', sku: 'SCG-1005', category: 'Electronics' },
-  { name: 'Orthopedic Support Brace', sku: 'SCG-1006', category: 'Medical' }
+  { name: 'Digital Thermometer', sku: 'SCG-1001', category: 'Medical Supplies' },
+  { name: 'Blood Pressure Monitor', sku: 'SCG-1002', category: 'Home Health' },
+  { name: 'First Aid Kit', sku: 'SCG-1003', category: 'First Aid' },
+  { name: 'Nitrile Exam Gloves', sku: 'SCG-1004', category: 'PPE' },
+  { name: 'Alcohol Prep Pads', sku: 'SCG-1005', category: 'Infection Prevention' },
+  { name: 'Orthopedic Support Brace', sku: 'SCG-1006', category: 'Daily Living Aids' }
 ];
 
 const complianceItems = [
   {
-    title: 'Authorized Supply Chains',
-    text: 'Inventory is sourced through authorized distributors, manufacturers, and verified wholesale partners.'
+    title: 'Authorized Distribution',
+    text: 'Products are sourced through authorized distributors, manufacturers, and verified wholesale supply channels.'
   },
   {
-    title: 'MAP Policy Compliance',
-    text: 'We support responsible pricing standards and brand policy compliance across distribution channels.'
+    title: 'Product Traceability',
+    text: 'We maintain documentation and traceable procurement standards to support supplier confidence and product integrity.'
   },
   {
-    title: 'Brand Protection',
-    text: 'We prioritize long-term brand value, channel integrity, and responsible ecommerce representation.'
+    title: 'Quality Handling Standards',
+    text: 'Products are handled, stored, and distributed according to professional operating standards.'
   },
   {
-    title: 'Retail Channel Management',
-    text: 'Our network supports controlled retail distribution and vetted ecommerce partnerships.'
+    title: 'Direct Webstore Sales',
+    text: 'Our focus is on distribution through our owned platform and direct customer relationships.'
   },
   {
-    title: 'Supply Chain Transparency',
-    text: 'Strategic Commerce Group maintains traceable procurement standards and source documentation.'
+    title: 'Non-RX Product Focus',
+    text: 'Our healthcare assortment is centered on non-prescription products, personal care, and wellness essentials.'
   },
   {
-    title: 'Marketplace Standards',
-    text: 'We promote responsible marketplace distribution aligned with manufacturer expectations.'
+    title: 'Compliance Commitment',
+    text: 'We do not participate in product exporting, government bids, or prescription drug distribution.'
   }
 ];
 
 const whyBrandsPartner = [
   {
-    title: 'Responsible Marketplace Distribution',
-    text: 'We help brands expand through retail and ecommerce channels while protecting brand value.'
+    title: 'Controlled Distribution',
+    text: 'We support responsible growth through direct webstore sales and structured business purchasing relationships.'
   },
   {
-    title: 'Scalable Distribution',
-    text: 'Our model supports wholesale, retail, and ecommerce growth across North America.'
+    title: 'Scalable Procurement',
+    text: 'Our infrastructure is built to support consistent purchasing, replenishment, and long-term supply relationships.'
   },
   {
     title: 'Long-Term Partnerships',
-    text: 'We focus on sustainable supplier relationships and strategic distribution growth.'
+    text: 'We value stable supplier relationships built on transparency, compliance, and reliable execution.'
   }
 ];
 
@@ -97,54 +97,54 @@ function Card({ title, text }) {
 
 export default function App() {
   const [supplierForm, setSupplierForm] = useState({
-  companyName: '',
-  contactName: '',
-  email: '',
-  productLines: ''
-});
-
-const [submitted, setSubmitted] = useState(false);
-
-const handleSupplierChange = (e) => {
-  setSupplierForm({
-    ...supplierForm,
-    [e.target.name]: e.target.value
-  });
-};
-
-const handleSupplierSubmit = async (e) => {
-  e.preventDefault();
-
-  const response = await fetch('https://formspree.io/f/xaqpazwp', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json'
-    },
-    body: JSON.stringify(supplierForm)
+    companyName: '',
+    contactName: '',
+    email: '',
+    productLines: ''
   });
 
-  if (response.ok) {
-    setSubmitted(true);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSupplierChange = (e) => {
     setSupplierForm({
-      companyName: '',
-      contactName: '',
-      email: '',
-      productLines: ''
+      ...supplierForm,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSupplierSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('https://formspree.io/f/xaqpazwp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(supplierForm)
     });
 
-    setTimeout(() => {
-      const thankYouSection = document.getElementById('thank-you');
-      if (thankYouSection) {
-        thankYouSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  } else {
-    alert('There was a problem submitting the form. Please try again.');
-  }
-};
+    if (response.ok) {
+      setSubmitted(true);
+      setSupplierForm({
+        companyName: '',
+        contactName: '',
+        email: '',
+        productLines: ''
+      });
 
-return (
+      setTimeout(() => {
+        const thankYouSection = document.getElementById('thank-you');
+        if (thankYouSection) {
+          thankYouSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      alert('There was a problem submitting the form. Please try again.');
+    }
+  };
+
+  return (
     <div className="site-shell">
       <header className="topbar">
         <div className="container nav-wrap">
@@ -152,104 +152,158 @@ return (
             <img src="/logo.png" alt="Strategic Commerce Group logo" />
             <span>Strategic Commerce Group</span>
           </a>
+
           <nav className="nav-links">
             <a href="#brands">Brands</a>
+            <a href="#medical">Medical Supply</a>
             <a href="#catalog">Catalog</a>
-            <a href="#distribution">Distribution</a>
+            <a href="#compliance">Compliance</a>
             <a href="#suppliers">Suppliers</a>
-            </nav>
+          </nav>
         </div>
       </header>
 
       <main>
         <section className="hero" id="home">
-  <div className="container hero-grid">
-    <div className="hero-content">
-      <img
-        src="/logo.png"
-        alt="Strategic Commerce Group"
-        className="hero-logo"
-      />
+          <div className="container hero-grid">
+            <div className="hero-content">
+              <img
+                src="/logo.png"
+                alt="Strategic Commerce Group"
+                className="hero-logo"
+              />
 
-      <p className="eyebrow light">National Wholesale Distribution</p>
+              <p className="eyebrow light">
+                Healthcare, Personal Care, and Essential Product Distribution
+              </p>
 
-      <h1>
-        Strategic distribution infrastructure built for growth, compliance, and long-term supply partnerships.
-      </h1>
+              <h1>
+                Reliable distribution infrastructure built for compliance,
+                consistency, and long-term supply partnerships.
+              </h1>
 
-      <p className="hero-copy">
-        Strategic Commerce Group supports manufacturers, authorized distributors,
-        retailers, and ecommerce partners through dependable procurement,
-        controlled distribution, and scalable B2B supply solutions.
-      </p>
+              <p className="hero-copy">
+                Strategic Commerce Group is a U.S.-based distribution company
+                focused on medical supplies, personal care products, home health
+                essentials, and wellness categories. We support direct webstore
+                sales and business purchasing through dependable procurement,
+                compliant sourcing, and scalable operational workflows.
+              </p>
 
-      <div className="hero-actions">
-        <a className="button button-light" href="#distribution">
-          View Distribution Model
-        </a>
-        <a className="button button-accent" href="#supplier-application">
-          Become a Supplier
-        </a>
-      </div>
+              <div className="hero-actions">
+                <a className="button button-light" href="#distribution">
+                  View Distribution Model
+                </a>
+                <a className="button button-accent" href="#supplier-application">
+                  Become a Supplier
+                </a>
+              </div>
 
-      <div className="hero-trust-row">
-        <span>Authorized sourcing</span>
-        <span>MAP-conscious distribution</span>
-        <span>Nationwide B2B reach</span>
-      </div>
-    </div>
+              <div className="hero-trust-row">
+                <span>Authorized sourcing</span>
+                <span>Direct webstore sales</span>
+                <span>Non-RX healthcare focus</span>
+              </div>
+            </div>
 
-    <div className="hero-panel hero-panel-premium">
-      <p className="hero-panel-label">Operational Snapshot</p>
-      <h3>Built to support modern wholesale growth.</h3>
+            <div className="hero-panel hero-panel-premium">
+              <p className="hero-panel-label">Operational Snapshot</p>
+              <h3>Built to support modern wholesale growth.</h3>
 
-      <div className="hero-metrics">
-        <div className="hero-metric">
-          <strong>150+</strong>
-          <span>Brand relationships</span>
-        </div>
-        <div className="hero-metric">
-          <strong>5,000+</strong>
-          <span>Active SKUs</span>
-        </div>
-        <div className="hero-metric">
-          <strong>B2B</strong>
-          <span>Wholesale focus</span>
-        </div>
-        <div className="hero-metric">
-          <strong>U.S.</strong>
-          <span>Distribution reach</span>
-        </div>
-      </div>
+              <div className="hero-metrics">
+                <div className="hero-metric">
+                  <strong>150+</strong>
+                  <span>Brand relationships</span>
+                </div>
+                <div className="hero-metric">
+                  <strong>5,000+</strong>
+                  <span>Active SKUs</span>
+                </div>
+                <div className="hero-metric">
+                  <strong>B2B</strong>
+                  <span>Wholesale focus</span>
+                </div>
+                <div className="hero-metric">
+                  <strong>U.S.</strong>
+                  <span>Distribution reach</span>
+                </div>
+              </div>
 
-      <div className="hero-panel-divider" />
+              <div className="hero-panel-divider" />
 
-      <ul className="hero-panel-list">
-        <li>Authorized distributor sourcing</li>
-        <li>Professional procurement workflows</li>
-        <li>Retail, wholesale, and ecommerce support</li>
-        <li>Scalable supply chain infrastructure</li>
-      </ul>
-    </div>
-  </div>
-</section>
+              <ul className="hero-panel-list">
+                <li>Authorized distributor sourcing</li>
+                <li>Healthcare and personal care categories</li>
+                <li>Direct-to-consumer and B2B support</li>
+                <li>Scalable procurement infrastructure</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
         <section className="stats-section">
           <div className="container stats-grid">
-            <div className="stat-card"><strong>150+</strong><span>Brands</span></div>
-            <div className="stat-card"><strong>5,000+</strong><span>Products</span></div>
-            <div className="stat-card"><strong>Nationwide</strong><span>Distribution</span></div>
-            <div className="stat-card"><strong>B2B</strong><span>Wholesale Network</span></div>
+            <div className="stat-card">
+              <strong>150+</strong>
+              <span>Brands</span>
+            </div>
+            <div className="stat-card">
+              <strong>5,000+</strong>
+              <span>Products</span>
+            </div>
+            <div className="stat-card">
+              <strong>U.S.-Based</strong>
+              <span>Distribution</span>
+            </div>
+            <div className="stat-card">
+              <strong>B2B</strong>
+              <span>Wholesale Network</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-white" id="medical">
+          <div className="container">
+            <SectionHeading
+              eyebrow="Medical supply distribution"
+              title="Medical supply distribution and healthcare essentials built for reliable, compliant growth."
+              text="Strategic Commerce Group provides access to non-prescription medical supplies, personal care items, home health products, and healthcare essentials through established wholesale distribution relationships. Our platform is designed to support product integrity, consistent availability, and scalable distribution through our owned webstore and business purchasing channels."
+            />
+
+            <div className="grid three-up">
+              <Card
+                title="Medical Supplies"
+                text="Non-RX healthcare products, diagnostics, first aid, and daily-use medical essentials."
+              />
+              <Card
+                title="Personal Care"
+                text="Hygiene, wellness, and self-care categories supported by dependable sourcing relationships."
+              />
+              <Card
+                title="Home Health"
+                text="Products that support at-home wellness, monitoring, mobility, and routine care needs."
+              />
+            </div>
+
+            <div className="coverage-box">
+              <h3>Core Product Categories</h3>
+              <p>
+                Personal protective equipment, wound care, first aid, diagnostics,
+                monitoring supplies, personal hygiene, OTC wellness products, and
+                home health essentials.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="section" id="brands">
           <div className="container">
             <SectionHeading
-  eyebrow="Brand portfolio"
-  title="A brand portfolio that reflects our standards, partnerships, and commitment to quality."
-  text="Our brand portfolio is a core part of our identity and the foundation of our business. We take pride in building relationships with trusted, recognized brands and curating a diverse product offering that reflects quality, reliability, and market demand. Each brand we represent contributes to our ability to serve customers across multiple categories while maintaining a high standard of consistency and professionalism. At Strategic Commerce Group, our portfolio represents our commitment to long-term partnerships, responsible distribution, and sustainable growth."
-/>
+              eyebrow="Brand portfolio"
+              title="A brand portfolio that reflects our standards, partnerships, and commitment to quality."
+              text="Our brand portfolio is a core part of our identity and the foundation of our business. We take pride in building relationships with trusted, recognized brands and curating a diverse product offering that reflects quality, reliability, and market demand. Each brand we represent contributes to our ability to serve customers across multiple categories while maintaining a high standard of consistency and professionalism. At Strategic Commerce Group, our portfolio represents our commitment to long-term partnerships, responsible distribution, and sustainable growth."
+            />
+
             <div className="brand-grid">
               {brandWall.map((brand) => (
                 <div className="brand-chip" key={brand}>
@@ -264,53 +318,79 @@ return (
         <section className="section gradient-soft" id="distribution">
           <div className="container">
             <SectionHeading
-  eyebrow="Distribution network"
-  title="A multi-channel distribution model built to expand reach, drive sales, and support long-term growth."
-  text="Our ability to operate across retail, wholesale, and e-commerce channels is a core strength of Strategic Commerce Group. By positioning products where they perform best, we expand brand reach, increase visibility, and support consistent sales across multiple channels. This approach provides our partners with broader market access, controlled distribution, and a scalable pathway for growth, while strengthening our ability to adapt and deliver long-term value."
-/>
+              eyebrow="Distribution model"
+              title="A distribution model built around direct webstore sales, business purchasing, and long-term supplier relationships."
+              text="Strategic Commerce Group is focused on building a dependable distribution platform for healthcare, personal care, and essential consumer product categories. Our model emphasizes controlled sourcing, direct customer relationships, and scalable procurement workflows that support steady growth and supplier confidence."
+            />
+
             <div className="grid three-up">
-              <Card title="Retail Distribution" text="Supplying specialty retailers and established resellers across multiple product categories." />
-              <Card title="Ecommerce Channels" text="Supporting responsible marketplace and online retail distribution with channel discipline." />
-              <Card title="Fulfillment Infrastructure" text="Procurement, order management, and fulfillment processes designed for scalable B2B operations." />
+              <Card
+                title="Direct Webstore Sales"
+                text="A company-owned online storefront built to support compliant product presentation and direct customer purchasing."
+              />
+              <Card
+                title="Business Purchasing Support"
+                text="Structured purchasing workflows for approved business buyers and long-term commercial relationships."
+              />
+              <Card
+                title="Procurement Infrastructure"
+                text="Operational systems designed to support replenishment, order coordination, and scalable distribution."
+              />
             </div>
+
             <div className="coverage-box">
-              <h3>North American Distribution Coverage</h3>
-              <p>West Coast distribution, Central distribution, East Coast distribution, online marketplace supply, B2B retail supply, and wholesale partner coverage.</p>
+              <h3>Operating Focus</h3>
+              <p>
+                U.S.-based distribution focused on direct webstore fulfillment,
+                business purchasing support, and long-term supplier alignment.
+              </p>
             </div>
           </div>
         </section>
 
         <section className="section" id="compliance">
-  <div className="container">
-    <SectionHeading
-      eyebrow="Trust and compliance"
-      title="Trust and compliance are the foundation of every supplier relationship we build."
-      text="Strategic Commerce Group operates with a strict commitment to sourcing products exclusively through authorized distributors, manufacturers, and verified wholesale channels. We maintain clear procurement documentation, uphold MAP and brand policy standards, and prioritize responsible marketplace representation to protect brand integrity. Our processes are designed to align with manufacturer expectations, ensuring transparency, consistency, and accountability across every transaction. By maintaining high compliance standards and a long-term partnership approach, we position ourselves as a reliable and trusted distribution partner—making it easy for brands and suppliers to confidently approve and grow with us."
-    />
-    <div className="grid three-up">
-      {complianceItems.map((item) => (
-        <Card key={item.title} title={item.title} text={item.text} />
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="container">
+            <SectionHeading
+              eyebrow="Trust and compliance"
+              title="Compliance, product integrity, and responsible sourcing are central to every supplier relationship we build."
+              text="Strategic Commerce Group operates with a strong commitment to authorized sourcing, product traceability, and professional distribution standards. We source through legitimate and verifiable wholesale channels and maintain clear procurement practices designed to support supplier confidence. Our focus is on non-prescription healthcare products, personal care, and wellness essentials distributed through our owned platform and direct business relationships. We do not participate in exporting, government contract bids, or prescription drug distribution."
+            />
+
+            <div className="grid three-up">
+              {complianceItems.map((item) => (
+                <Card key={item.title} title={item.title} text={item.text} />
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="section section-white" id="catalog">
           <div className="container">
             <SectionHeading
-  eyebrow="Product catalog"
-  title="A growing catalog built to support scale, consistency, and market expansion."
-  text="Our product catalog reflects the continued growth of Strategic Commerce Group. We are focused on building a diverse, high-quality selection of products sourced through trusted channels, allowing us to meet the evolving needs of our customers and partners. As our catalog expands, so does our ability to strengthen market presence, support scalable distribution, and deliver reliable supply across retail, wholesale, and e-commerce channels."
-/>
+              eyebrow="Product catalog"
+              title="A growing product catalog focused on medical supplies, personal care, and health essentials."
+              text="Our catalog is being developed to support consistent access to trusted healthcare, wellness, and personal care categories. Strategic Commerce Group is focused on building a reliable assortment of non-prescription products sourced through established wholesale relationships and presented through a professional direct webstore experience."
+            />
+
             <div className="catalog-grid">
               {catalogItems.map((item) => (
-                <div className="catalog-card" key={item.sku}> <span className="pill">{item.category}</span> <h3>{item.name}</h3> <p>{item.description}</p> </div>
+                <div className="catalog-card" key={item.sku}>
+                  <span className="pill">{item.category}</span>
+                  <h3>{item.name}</h3>
+                  <p>SKU: {item.sku}</p>
+                </div>
               ))}
             </div>
+
             <div className="catalog-request" id="catalog-request">
               <h3>Catalog access request</h3>
-              <p>Full wholesale catalog access will be available soon for approved retailers and distribution partners.</p>
-              <button className="button button-primary" type="button">Request Catalog Access — Coming Soon</button>
+              <p>
+                Full wholesale catalog access will be available soon for approved
+                retailers and distribution partners.
+              </p>
+              <button className="button button-primary" type="button">
+                Request Catalog Access — Coming Soon
+              </button>
             </div>
           </div>
         </section>
@@ -318,34 +398,49 @@ return (
         <section className="section gradient-soft" id="orders">
           <div className="container">
             <SectionHeading
-  eyebrow="B2B order system"
-  title="Modern ordering infrastructure powered by scalable technology and efficient workflows."
-  text="Strategic Commerce Group utilizes modern B2B ordering methods and evolving technology to create a seamless purchasing experience for our partners. Our infrastructure supports scalable order management, streamlined procurement, and flexible purchasing, while improving accuracy and fulfillment speed. As our platform continues to advance, we are focused on integrating real-time inventory, tiered pricing, and automated workflows to deliver a reliable and efficient wholesale ordering experience."
-/>
+              eyebrow="B2B order system"
+              title="Modern ordering infrastructure powered by scalable technology and efficient workflows."
+              text="Strategic Commerce Group utilizes modern B2B ordering methods and evolving technology to create a seamless purchasing experience for partners. Our infrastructure supports scalable order management, streamlined procurement, and flexible purchasing while improving accuracy and fulfillment speed. As our platform continues to advance, we are focused on integrating inventory visibility, account-based pricing, and automated workflows to deliver a reliable wholesale ordering experience."
+            />
+
             <div className="grid four-up">
-              <Card title="Wholesale Pricing" text="Tiered B2B pricing based on customer account structure and order volume." />
-              <Card title="Case and Pallet Orders" text="Bulk ordering options for retailers, distributors, and larger procurement partners." />
-              <Card title="Inventory Sync" text="Future-ready architecture for real-time stock and catalog availability." />
-              <Card title="Automated Procurement" text="A structure that supports future supply chain integration and scalable purchasing workflows." />
+              <Card
+                title="Wholesale Pricing"
+                text="Tiered B2B pricing based on customer account structure and order volume."
+              />
+              <Card
+                title="Case and Bulk Orders"
+                text="Ordering options for business buyers, retailers, and larger procurement partners."
+              />
+              <Card
+                title="Inventory Visibility"
+                text="Future-ready architecture for catalog and stock availability."
+              />
+              <Card
+                title="Automated Procurement"
+                text="A structure that supports future supply chain integration and scalable purchasing workflows."
+              />
             </div>
           </div>
-        </section>        
+        </section>
 
         <section className="section" id="suppliers">
           <div className="container">
             <div className="trust-bar">
-  <div className="trust-item">✔ Authorized Distributor Sourcing</div>
-  <div className="trust-item">✔ MAP Policy Compliant</div>
-  <div className="trust-item">✔ Brand Protection Focused</div>
-  <div className="trust-item">✔ Transparent Procurement</div>
-  <div className="trust-item">✔ Scalable Distribution Network</div>
-  <div className="trust-item">✔ Long-Term Partnership Approach</div>
-</div>
-                       <SectionHeading
-  eyebrow="Supplier acquisition"
-  title="A trusted distribution partner focused on long-term growth, compliance, and brand protection."
-  text="Strategic Commerce Group is committed to building long-term relationships with manufacturers and authorized distributors. We operate with a strong focus on brand integrity, compliant sourcing, and controlled distribution across all channels. By aligning with supplier expectations, maintaining transparency, and supporting responsible marketplace practices, we provide a reliable and professional partnership model that allows brands to confidently expand and grow with us."
-/>
+              <div className="trust-item">✔ Authorized Distributor Sourcing</div>
+              <div className="trust-item">✔ Direct Webstore Sales</div>
+              <div className="trust-item">✔ Non-RX Product Focus</div>
+              <div className="trust-item">✔ Transparent Procurement</div>
+              <div className="trust-item">✔ U.S.-Based Distribution</div>
+              <div className="trust-item">✔ Long-Term Supplier Partnerships</div>
+            </div>
+
+            <SectionHeading
+              eyebrow="Supplier partnerships"
+              title="A trusted distribution partner focused on compliance, reliable purchasing, and long-term growth."
+              text="Strategic Commerce Group is committed to building lasting relationships with manufacturers and authorized distributors. We operate with a clear focus on direct webstore sales, compliant sourcing, transparent procurement, and dependable operational execution. Our goal is to create stable supplier relationships that support growth, consistency, and professional brand representation."
+            />
+
             <div className="grid three-up">
               {whyBrandsPartner.map((item) => (
                 <Card key={item.title} title={item.title} text={item.text} />
@@ -359,129 +454,145 @@ return (
             <div>
               <p className="eyebrow light">Become a distribution partner</p>
 
-<h2>
-  Partner with a distribution network built for growth, compliance, and long-term brand value.
-</h2>
+              <h2>
+                Partner with a distribution company built for compliance,
+                consistency, and long-term supply growth.
+              </h2>
 
-<p>
-  Strategic Commerce Group works with manufacturers and authorized distributors to responsibly expand product reach across retail, wholesale, and e-commerce channels. Our focus on brand protection, transparent operations, and controlled growth allows us to serve as a reliable extension of your distribution strategy.
-</p>
+              <p>
+                Strategic Commerce Group works with manufacturers and authorized
+                distributors to support healthcare, personal care, and essential
+                product categories through direct webstore sales and structured
+                business purchasing relationships.
+              </p>
             </div>
-            <a className="button button-light" href="#supplier-application">Apply for partnership</a>
+
+            <a className="button button-light" href="#supplier-application">
+              Apply for partnership
+            </a>
           </div>
         </section>
 
         <section className="section section-white" id="supplier-application">
-  <div className="container narrow">
-    <SectionHeading
-      eyebrow="Supplier application"
-      title="A structured onboarding process designed to support strong, long-term supplier partnerships."
-      text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution."
-    />
+          <div className="container narrow">
+            <SectionHeading
+              eyebrow="Supplier application"
+              title="A structured onboarding process designed to support strong, long-term supplier partnerships."
+              text="Our supplier application process reflects the standards of Strategic Commerce Group, focused on transparency, compliance, and responsible distribution."
+            />
 
-    <div className="portal-card">
-      {submitted ? (
-        <div id="thank-you">
-          <h3>Your partnership inquiry has been submitted.</h3>
-          <p>
-            Thank you for your interest in working with Strategic Commerce Group.
-            Our team will review your information and follow up as appropriate.
-          </p>
-        </div>
-      ) : (
-        <form className="form-grid" onSubmit={handleSupplierSubmit}>
-          <input
-            type="text"
-            name="companyName"
-            placeholder="Company name"
-            required
-            value={supplierForm.companyName}
-            onChange={handleSupplierChange}
-          />
-          <input
-            type="text"
-            name="contactName"
-            placeholder="Contact name"
-            required
-            value={supplierForm.contactName}
-            onChange={handleSupplierChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email address"
-            required
-            value={supplierForm.email}
-            onChange={handleSupplierChange}
-          />
-          <input
-            type="text"
-            name="productLines"
-            placeholder="Brand or product lines"
-            value={supplierForm.productLines}
-            onChange={handleSupplierChange}
-          />
+            <div className="portal-card">
+              {submitted ? (
+                <div id="thank-you">
+                  <h3>Your partnership inquiry has been submitted.</h3>
+                  <p>
+                    Thank you for your interest in working with Strategic Commerce Group.
+                    Our team will review your information and follow up as appropriate.
+                  </p>
+                </div>
+              ) : (
+                <form className="form-grid" onSubmit={handleSupplierSubmit}>
+                  <input
+                    type="text"
+                    name="companyName"
+                    placeholder="Company name"
+                    required
+                    value={supplierForm.companyName}
+                    onChange={handleSupplierChange}
+                  />
+                  <input
+                    type="text"
+                    name="contactName"
+                    placeholder="Contact name"
+                    required
+                    value={supplierForm.contactName}
+                    onChange={handleSupplierChange}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    required
+                    value={supplierForm.email}
+                    onChange={handleSupplierChange}
+                  />
+                  <input
+                    type="text"
+                    name="productLines"
+                    placeholder="Brand or product lines"
+                    value={supplierForm.productLines}
+                    onChange={handleSupplierChange}
+                  />
 
-          <button className="button button-primary" type="submit">
-            Submit partnership inquiry
-          </button>
-        </form>
-      )}
-    </div>
-  </div>
-</section>       
+                  <button className="button button-primary" type="submit">
+                    Submit partnership inquiry
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </section>
 
         <section className="section" id="about">
           <div className="container">
             <SectionHeading
-  eyebrow="Procurement standards"
-  title="A procurement approach built on integrity, transparency, and trusted partnerships."
-  text="Our procurement standards reflect the core values of Strategic Commerce Group. We are committed to sourcing inventory exclusively through authorized distributors, manufacturers, and verified wholesale channels, ensuring authenticity, reliability, and brand alignment. Through disciplined processes, documentation, and traceability, we support responsible distribution while protecting brand integrity and building long-term supplier trust."
-/>
+              eyebrow="Procurement standards"
+              title="A procurement approach built on integrity, traceability, and trusted wholesale relationships."
+              text="Our procurement standards reflect the operating principles of Strategic Commerce Group. We are committed to sourcing products through authorized distributors, manufacturers, and verified wholesale channels to support authenticity, consistency, and supplier confidence. Through disciplined documentation and traceable purchasing practices, we maintain a professional distribution model built for long-term growth."
+            />
+
             <div className="grid three-up">
-              <Card title="Authorized Distributor Sourcing" text="Inventory is procured from authorized distributors, manufacturers, and verified wholesale partners." />
-              <Card title="Traceable Procurement" text="Our process supports documentation and traceability for supplier relationships and inventory sources." />
-              <Card title="Quality Assurance" text="Products are stored, handled, and distributed according to professional supply chain standards." />
+              <Card
+                title="Authorized Distributor Sourcing"
+                text="Inventory is procured from authorized distributors, manufacturers, and verified wholesale partners."
+              />
+              <Card
+                title="Traceable Procurement"
+                text="Our process supports documentation and traceability for supplier relationships and inventory sources."
+              />
+              <Card
+                title="Quality Assurance"
+                text="Products are stored, handled, and distributed according to professional supply chain standards."
+              />
             </div>
           </div>
         </section>
-            </main>
+      </main>
 
       <footer className="footer">
-  <div className="container footer-wrap">
-    <div>
-      <img
-        className="footer-logo"
-        src="/logo.png"
-        alt="Strategic Commerce Group logo"
-      />
-      <p>Strategic Commerce Group</p>
-    </div>
+        <div className="container footer-wrap">
+          <div>
+            <img
+              className="footer-logo"
+              src="/logo.png"
+              alt="Strategic Commerce Group logo"
+            />
+            <p>Strategic Commerce Group</p>
+          </div>
 
-    <div>
-      <p>strategiccommercegroup.com</p>
-      <p>National wholesale distribution and commerce infrastructure.</p>
+          <div>
+            <p>strategiccommercegroup.com</p>
+            <p>U.S.-based wholesale distribution and commerce infrastructure.</p>
 
-      <p>
-        Phone:{' '}
-        <a href="tel:14809155598" className="footer-link">
-          (480) 915-5598
-        </a>
-      </p>
+            <p>
+              Phone:{' '}
+              <a href="tel:14809155598" className="footer-link">
+                (480) 915-5598
+              </a>
+            </p>
 
-      <p>
-        For more information, contact us at{' '}
-        <a
-          href="mailto:info@strategiccommercegroup.com"
-          className="footer-link"
-        >
-          info@strategiccommercegroup.com
-        </a>
-      </p>
-    </div>
-  </div>
-</footer>
+            <p>
+              For more information, contact us at{' '}
+              <a
+                href="mailto:info@strategiccommercegroup.com"
+                className="footer-link"
+              >
+                info@strategiccommercegroup.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
-      
