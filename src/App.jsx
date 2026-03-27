@@ -571,7 +571,7 @@ export default function App() {
           </div>
 
           <div>
-            <p>strategiccommercegroup.com</p>
+            <p>www.strategiccommercegroup.com</p>
             <p>U.S.-based wholesale distribution and commerce infrastructure.</p>
 
             <p>
