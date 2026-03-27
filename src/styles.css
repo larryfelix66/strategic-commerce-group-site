@@ -611,8 +611,11 @@ a {
 }
 
 .footer-logo {
-  width: 78px;
-  margin-bottom: 10px;
+  width: clamp(120px, 12vw, 180px);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  filter: brightness(1.05);
 }
 
 .footer p {
