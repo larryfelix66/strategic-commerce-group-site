@@ -389,8 +389,8 @@ export default function App() {
                 retailers and distribution partners.
               </p>
               <button className="button button-primary" type="button">
-                Request Catalog Access — Coming Soon
-              </button>
+  Request Catalog Access
+</button>
             </div>
           </div>
         </section>
