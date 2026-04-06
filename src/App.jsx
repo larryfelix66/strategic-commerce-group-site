@@ -97,7 +97,7 @@ function Card({ title, text }) {
   );
 }
 
-export default function App() {
+function HomePage() {
   const [supplierForm, setSupplierForm] = useState({
     companyName: '',
     contactName: '',
