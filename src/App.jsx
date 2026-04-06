@@ -598,3 +598,14 @@ function HomePage() {
     </div>
   );
 }
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/partner" element={<Partner />} />
+      </Routes>
+    </Router>
+  );
+}
