@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Partner from "./pages/Partner";
 
 const featuredBrands = [
   'Tru',
