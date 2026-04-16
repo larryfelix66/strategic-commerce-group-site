@@ -428,7 +428,7 @@ velocity across e-commerce and wholesale distribution channels."
 
       <div className="catalog-category-card">
         <div className="catalog-icon">📦</div>
-        <h3>General Merchandise</h3>
+        <h3>General Consumer Goods</h3>
         <p>
           Complementary consumer product categories selected for operational
           fit, demand consistency, and channel expansion.
