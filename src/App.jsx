@@ -436,18 +436,24 @@ velocity across e-commerce and wholesale distribution channels."
       </div>
     </div>
 
-    <div className="catalog-positioning-box">
-      <h3>Category-Driven Distribution Strategy</h3>
-      <p>
-        Our catalog strategy is centered on essential product categories with stable demand,
-strong replenishment cycles, and alignment with long-term supplier relationships.
+    <div className="purchasing-box">
+  <h3>Purchasing & Partnership Approach</h3>
+  <p>
+    Strategic Commerce Group operates with a long-term purchasing mindset,
+    focused on consistent reorder cycles, category depth, and supplier alignment.
+    We prioritize building stable procurement relationships rather than
+    short-term transactional buying.
+  </p>
 
-Rather than focusing on isolated SKUs, we build structured category depth designed
-to support consistent purchasing, predictable reorder patterns, and controlled
-channel growth across e-commerce and wholesale distribution.
-      </p>
-    </div>
-  </div>
+  <ul className="purchasing-list">
+    <li>Focused on repeat purchasing and replenishment cycles</li>
+    <li>Category-based buying vs. one-off SKU testing</li>
+    <li>Aligned with supplier MAP and channel guidelines</li>
+    <li>Built for long-term volume growth and predictable demand</li>
+  </ul>
+</div>
+
+</div> 
 </section>
 
         <section className="section gradient-soft" id="orders">
