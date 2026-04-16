@@ -373,7 +373,11 @@ function HomePage() {
     <SectionHeading
       eyebrow="Product Categories"
       title="Category-Focused Distribution Built for Scalable Growth"
-      text="Strategic Commerce Group focuses on high-demand consumer categories supported by compliant sourcing, operational consistency, and long-term supplier alignment. Our assortment strategy is built around essential products with strong replenishment potential across e-commerce and wholesale channels."
+      text="Strategic Commerce Group focuses on high-demand consumer categories supported by
+authorized sourcing, operational consistency, and long-term supplier alignment.
+
+Our assortment strategy is built around essential products with strong replenishment
+velocity across e-commerce and wholesale distribution channels."
     />
 
     <div className="catalog-category-grid">
