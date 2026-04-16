@@ -439,11 +439,12 @@ velocity across e-commerce and wholesale distribution channels."
     <div className="catalog-positioning-box">
       <h3>Category-Driven Distribution Strategy</h3>
       <p>
-        Our catalog strategy is centered on essential product categories with
-        stable demand, strong replenishment potential, and alignment with
-        long-term supplier relationships. Rather than presenting a limited item
-        list, we focus on scalable category development designed to support
-        consistent purchasing and controlled channel growth.
+        Our catalog strategy is centered on essential product categories with stable demand,
+strong replenishment cycles, and alignment with long-term supplier relationships.
+
+Rather than focusing on isolated SKUs, we build structured category depth designed
+to support consistent purchasing, predictable reorder patterns, and controlled
+channel growth across e-commerce and wholesale distribution.
       </p>
     </div>
   </div>
