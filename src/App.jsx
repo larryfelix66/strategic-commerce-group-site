@@ -23,9 +23,7 @@ const featuredBrands = [
   'Kanaplex'
 ];
 
-const brandWall = [
-  ...featuredBrands,
-  ];
+const brandWall = [...featuredBrands];
 
 const catalogItems = [
   { name: 'Digital Thermometer', sku: 'SCG-1001', category: 'Medical Supplies' },
