@@ -369,35 +369,81 @@ function HomePage() {
         </section>
 
         <section className="section section-white" id="catalog">
-          <div className="container">
-            <SectionHeading
-              eyebrow="Product catalog"
-              title="A growing product catalog focused on medical supplies, personal care, and health essentials."
-              text="Our catalog is being developed to support consistent access to trusted healthcare, wellness, and personal care categories. Strategic Commerce Group is focused on building a reliable assortment of non-prescription products sourced through established wholesale relationships and presented through a professional direct webstore experience."
-            />
+  <div className="container">
+    <SectionHeading
+      eyebrow="Product Categories"
+      title="Product categories positioned for scalable distribution"
+      text="Strategic Commerce Group focuses on high-demand consumer categories supported by compliant sourcing, operational consistency, and long-term supplier alignment. Our assortment strategy is built around essential products with strong replenishment potential across e-commerce and wholesale channels."
+    />
 
-            <div className="catalog-grid">
-              {catalogItems.map((item) => (
-                <div className="catalog-card" key={item.sku}>
-                  <span className="pill">{item.category}</span>
-                  <h3>{item.name}</h3>
-                  <p>SKU: {item.sku}</p>
-                </div>
-              ))}
-            </div>
+    <div className="catalog-category-grid">
+      <div className="catalog-category-card">
+        <div className="catalog-icon">🏥</div>
+        <h3>Medical & Home Health</h3>
+        <p>
+          Non-prescription supplies, diagnostics, home monitoring products,
+          first aid, and daily-use healthcare essentials.
+        </p>
+      </div>
 
-            <div className="catalog-request" id="catalog-request">
-              <h3>Catalog access request</h3>
-              <p>
-                Full wholesale catalog access will be available soon for approved
-                retailers and distribution partners.
-              </p>
-              <button className="button button-primary" type="button">
-  Request Catalog Access
-</button>
-            </div>
-          </div>
-        </section>
+      <div className="catalog-category-card">
+        <div className="catalog-icon">🧴</div>
+        <h3>Health & Personal Care</h3>
+        <p>
+          Hygiene, wellness, self-care, and personal care categories aligned
+          with consistent consumer demand.
+        </p>
+      </div>
+
+      <div className="catalog-category-card">
+        <div className="catalog-icon">🛒</div>
+        <h3>Grocery & Consumables</h3>
+        <p>
+          High-velocity packaged goods and repeat-purchase essentials suited
+          for scalable replenishment.
+        </p>
+      </div>
+
+      <div className="catalog-category-card">
+        <div className="catalog-icon">🏠</div>
+        <h3>Household Essentials</h3>
+        <p>
+          Cleaning, maintenance, and everyday-use products that support
+          dependable recurring demand.
+        </p>
+      </div>
+
+      <div className="catalog-category-card">
+        <div className="catalog-icon">🐾</div>
+        <h3>Pet Supplies</h3>
+        <p>
+          Pet care, grooming, hygiene, and maintenance products across trusted
+          consumer categories.
+        </p>
+      </div>
+
+      <div className="catalog-category-card">
+        <div className="catalog-icon">📦</div>
+        <h3>General Merchandise</h3>
+        <p>
+          Complementary consumer product categories selected for operational
+          fit, demand consistency, and channel expansion.
+        </p>
+      </div>
+    </div>
+
+    <div className="catalog-positioning-box">
+      <h3>Category-Driven Distribution Strategy</h3>
+      <p>
+        Our catalog strategy is centered on essential product categories with
+        stable demand, strong replenishment potential, and alignment with
+        long-term supplier relationships. Rather than presenting a limited item
+        list, we focus on scalable category development designed to support
+        consistent purchasing and controlled channel growth.
+      </p>
+    </div>
+  </div>
+</section>
 
         <section className="section gradient-soft" id="orders">
           <div className="container">
