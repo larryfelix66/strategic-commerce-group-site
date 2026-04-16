@@ -309,13 +309,13 @@ function HomePage() {
             />
 
             <div className="brand-grid">
-              {brandWall.map((brand) => (
-                <div className="brand-chip" key={brand}>
-                  <div className="brand-mark" aria-hidden="true" />
-                  <span>{brand}</span>
-                </div>
-              ))}
-            </div>
+  {brandWall.map((brand) => (
+    <div className="brand-card" key={brand}>
+      <div className="brand-dot" />
+      <span>{brand}</span>
+    </div>
+  ))}
+</div>
           </div>
         </section>
 
