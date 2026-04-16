@@ -453,7 +453,7 @@ velocity across e-commerce and wholesale distribution channels."
     <li>Built for long-term volume growth and predictable demand</li>
   </ul>
 <p className="purchasing-note">
-  Initial purchasing is structured to support validation, category expansion, and long-term reorder potential.
+  Initial purchasing is structured to validate product performance and support scalable, long-term reorder growth.
 </p>
     
     </div>
