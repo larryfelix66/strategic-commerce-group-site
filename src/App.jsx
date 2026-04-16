@@ -452,7 +452,11 @@ velocity across e-commerce and wholesale distribution channels."
     <li>Aligned with supplier MAP and channel guidelines</li>
     <li>Built for long-term volume growth and predictable demand</li>
   </ul>
-</div>
+<p className="purchasing-note">
+  Initial purchasing is structured to support validation, category expansion, and long-term reorder potential.
+</p>
+    
+    </div>
 
 </div> 
 </section>
