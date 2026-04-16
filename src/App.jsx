@@ -438,11 +438,12 @@ velocity across e-commerce and wholesale distribution channels."
 
     <div className="purchasing-box">
   <h3>Purchasing & Partnership Approach</h3>
+
   <p>
-    Strategic Commerce Group operates with a long-term purchasing mindset,
-    focused on consistent reorder cycles, category depth, and supplier alignment.
-    We prioritize building stable procurement relationships rather than
-    short-term transactional buying.
+    Strategic Commerce Group operates with a long-term purchasing strategy
+    centered on consistent reorder cycles, category depth, and supplier alignment.
+    Our focus is on building stable procurement relationships that support
+    predictable demand, structured growth, and responsible channel expansion.
   </p>
 
   <ul className="purchasing-list">
