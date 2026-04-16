@@ -25,8 +25,7 @@ const featuredBrands = [
 
 const brandWall = [
   ...featuredBrands,
-  ...Array.from({ length: 6 }, (_, i) => `Emerging Brand Partner`)
-];
+  ];
 
 const catalogItems = [
   { name: 'Digital Thermometer', sku: 'SCG-1001', category: 'Medical Supplies' },
