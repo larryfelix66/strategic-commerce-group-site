@@ -25,7 +25,7 @@ const featuredBrands = [
 
 const brandWall = [
   ...featuredBrands,
-  ...Array.from({ length: 1 }, (_, i) => `Brand Partner ${i + 1}`)
+  ...Array.from({ length: 6 }, (_, i) => `Emerging Brand Partner`)
 ];
 
 const catalogItems = [
