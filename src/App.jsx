@@ -264,6 +264,30 @@ function HomePage() {
           </div>
         </section>
 
+        <section className="section section-white" id="authority">
+  <div className="container">
+    <SectionHeading
+      eyebrow="Distribution Authority"
+      title="Built to support compliant growth across modern commerce channels."
+      text="Strategic Commerce Group partners with manufacturers and distributors to support responsible product expansion through authorized sourcing, operational discipline, and structured multi-channel distribution."
+    />
+
+    <div className="grid three-up">
+      <Card
+        title="Authorized Supply Chains"
+        text="We work through legitimate wholesale relationships designed to support product integrity and supplier confidence."
+      />
+      <Card
+        title="Brand Protection Focus"
+        text="Our operating model emphasizes professional representation, channel discipline, and long-term supplier alignment."
+      />
+      <Card
+        title="Scalable Growth Infrastructure"
+        text="We are building a dependable distribution platform designed for category expansion, repeat purchasing, and long-term growth."
+      />
+    </div>
+  </div>
+</section>
         <section className="section section-white" id="medical">
           <div className="container">
             <SectionHeading
