@@ -282,8 +282,8 @@ function HomePage() {
         <section className="section section-white" id="medical">
           <div className="container">
             <SectionHeading
-              eyebrow="Medical supply distribution"
-              title="Medical supply distribution and healthcare essentials built for reliable, compliant growth."
+              eyebrow="Core distribution categories"
+title="Essential product categories built for reliable, compliant growth."
               text="Strategic Commerce Group provides access to non-prescription medical supplies, personal care items, home health products, and healthcare essentials through established wholesale distribution relationships. Our operating model is designed to support product integrity, consistent availability, and scalable distribution across business purchasing, wholesale, and digital commerce channels."
             />
 
