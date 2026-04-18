@@ -327,16 +327,16 @@ function HomePage() {
 
             <div className="grid three-up">
   <Card
-    title="Direct Webstore Sales"
-    text="A company-owned online storefront built to support compliant product presentation and direct customer purchasing."
+    title="Wholesale Distribution"
+    text="A structured distribution model designed to support compliant product flow across wholesale, business purchasing, and digital commerce channels."
   />
   <Card
     title="Business Purchasing Support"
-    text="Structured purchasing workflows for approved business buyers and long-term commercial relationships."
+    text="Structured purchasing workflows for approved business buyers, commercial accounts, and long-term supply relationships."
   />
   <Card
     title="Procurement Infrastructure"
-    text="Operational systems designed to support replenishment, order coordination, and scalable distribution."
+    text="Operational systems designed to support replenishment, order coordination, catalog growth, and scalable distribution."
   />
 </div>
 
