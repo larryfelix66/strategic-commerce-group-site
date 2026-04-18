@@ -341,12 +341,13 @@ function HomePage() {
 </div>
 
             <div className="coverage-box">
-              <h3>Operating Focus</h3>
-              <p>
-                U.S.-based distribution focused on direct webstore fulfillment,
-                business purchasing support, and long-term supplier alignment.
-              </p>
-            </div>
+  <h3>Operating Focus</h3>
+  <p>
+    U.S.-based wholesale distribution focused on authorized sourcing,
+    responsible channel expansion, business purchasing support, and
+    long-term supplier alignment.
+  </p>
+</div>
           </div>
         </section>
 
