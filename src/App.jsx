@@ -326,19 +326,19 @@ function HomePage() {
 />
 
             <div className="grid three-up">
-              <Card
-                title="Direct Webstore Sales"
-                text="A company-owned online storefront built to support compliant product presentation and direct customer purchasing."
-              />
-              <Card
-                title="Business Purchasing Support"
-                text="Structured purchasing workflows for approved business buyers and long-term commercial relationships."
-              />
-              <Card
-                title="Procurement Infrastructure"
-                text="Operational systems designed to support replenishment, order coordination, and scalable distribution."
-              />
-            </div>
+  <Card
+    title="Direct Webstore Sales"
+    text="A company-owned online storefront built to support compliant product presentation and direct customer purchasing."
+  />
+  <Card
+    title="Business Purchasing Support"
+    text="Structured purchasing workflows for approved business buyers and long-term commercial relationships."
+  />
+  <Card
+    title="Procurement Infrastructure"
+    text="Operational systems designed to support replenishment, order coordination, and scalable distribution."
+  />
+</div>
 
             <div className="coverage-box">
               <h3>Operating Focus</h3>
