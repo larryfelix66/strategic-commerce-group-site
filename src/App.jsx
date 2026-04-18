@@ -320,10 +320,10 @@ function HomePage() {
         <section className="section gradient-soft" id="distribution">
           <div className="container">
             <SectionHeading
-              eyebrow="Distribution model"
-              title="A distribution model built around direct webstore sales, business purchasing, and long-term supplier relationships."
-              text="Strategic Commerce Group is focused on building a dependable distribution platform for healthcare, personal care, and essential consumer product categories. Our model emphasizes controlled sourcing, direct customer relationships, and scalable procurement workflows that support steady growth and supplier confidence."
-            />
+  eyebrow="Distribution model"
+  title="A distribution model built around controlled sourcing, business purchasing, and long-term supplier relationships."
+  text="Strategic Commerce Group is focused on building a dependable distribution platform for health, wellness, grocery, household, and essential consumer product categories. Our model emphasizes authorized sourcing, responsible channel expansion, and scalable procurement workflows that support supplier confidence and long-term growth."
+/>
 
             <div className="grid three-up">
               <Card
