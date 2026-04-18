@@ -205,8 +205,8 @@ function HomePage() {
 
               <div className="hero-metrics">
                 <div className="hero-metric">
-                  <strong>150+</strong>
-                  <span>Brand relationships</span>
+                 <strong>150+</strong>
+<span>Brand portfolio focus</span>
                 </div>
                 <div className="hero-metric">
                   <strong>5,000+</strong>
