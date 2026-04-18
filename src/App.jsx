@@ -210,7 +210,7 @@ function HomePage() {
 
             <div className="hero-panel hero-panel-premium">
               <p className="hero-panel-label">Operational Snapshot</p>
-              <h3>Built to support modern wholesale growth.</h3>
+              <h3>Built to support responsible, scalable distribution growth.</h3>
 
               <div className="hero-metrics">
                 <div className="hero-metric">
