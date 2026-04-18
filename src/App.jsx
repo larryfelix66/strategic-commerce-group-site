@@ -633,7 +633,7 @@ function HomePage() {
 
           <div>
             <p>www.strategiccommercegroup.com</p>
-            <p>U.S.-based distribution company focused on healthcare, personal care, and essential product categories.</p>
+            <p>U.S.-based wholesale distribution company focused on health, wellness, grocery, household, and essential consumer product categories.</p>
 
             <p>
               Phone:{' '}
