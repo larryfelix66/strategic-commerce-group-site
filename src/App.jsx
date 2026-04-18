@@ -512,13 +512,13 @@ function HomePage() {
         <section className="section" id="suppliers">
           <div className="container">
             <div className="trust-bar">
-              <div className="trust-item">✔ Authorized Distributor Sourcing</div>
-              <div className="trust-item">✔ Direct Webstore Sales</div>
-              <div className="trust-item">✔ Non-RX Product Focus</div>
-              <div className="trust-item">✔ Transparent Procurement</div>
-              <div className="trust-item">✔ U.S.-Based Distribution</div>
-              <div className="trust-item">✔ Long-Term Supplier Partnerships</div>
-            </div>
+  <div className="trust-item">✔ Authorized Distributor Sourcing</div>
+  <div className="trust-item">✔ Brand Protection Focus</div>
+  <div className="trust-item">✔ Responsible Channel Strategy</div>
+  <div className="trust-item">✔ Transparent Procurement</div>
+  <div className="trust-item">✔ U.S.-Based Distribution</div>
+  <div className="trust-item">✔ Long-Term Supplier Partnerships</div>
+</div>
 
             <SectionHeading
   eyebrow="Supplier partnerships"
