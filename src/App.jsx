@@ -497,10 +497,10 @@ function HomePage() {
             </div>
 
             <SectionHeading
-              eyebrow="Supplier partnerships"
-              title="A trusted distribution partner focused on compliance, reliable purchasing, and long-term growth."
-              text="Strategic Commerce Group is committed to building lasting relationships with manufacturers and authorized distributors. We operate with a clear focus on direct webstore sales, compliant sourcing, transparent procurement, and dependable operational execution. Our goal is to create stable supplier relationships that support growth, consistency, and professional brand representation."
-            />
+  eyebrow="Supplier partnerships"
+  title="A trusted distribution partner focused on compliance, reliable purchasing, and long-term growth."
+  text="Strategic Commerce Group is committed to building lasting relationships with manufacturers and authorized distributors. We operate with a clear focus on compliant sourcing, transparent procurement, responsible channel strategy, and dependable operational execution. Our goal is to create stable supplier relationships that support growth, consistency, and professional brand representation."
+/>
 
             <div className="grid three-up">
               {whyBrandsPartner.map((item) => (
