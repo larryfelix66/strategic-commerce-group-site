@@ -234,11 +234,11 @@ function HomePage() {
               <div className="hero-panel-divider" />
 
               <ul className="hero-panel-list">
-                <li>Authorized distributor sourcing</li>
-                <li>Healthcare and personal care categories</li>
-                <li>Direct-to-consumer and B2B support</li>
-                <li>Scalable procurement infrastructure</li>
-              </ul>
+  <li>Authorized distributor and wholesale sourcing</li>
+  <li>Health, wellness, grocery, and household categories</li>
+  <li>Wholesale, B2B, and digital commerce support</li>
+  <li>Scalable procurement and fulfillment infrastructure</li>
+</ul>
             </div>
           </div>
         </section>
