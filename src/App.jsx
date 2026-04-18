@@ -150,7 +150,7 @@ function HomePage() {
   <a href="#catalog">Catalog</a>
   <a href="#compliance">Compliance</a>
   <a href="#suppliers">Suppliers</a>
-  <a href="/partner">Supplier Partnerships</a>
+  <a href="/partner">Partnerships</a>
 </nav>
         </div>
       </header>
