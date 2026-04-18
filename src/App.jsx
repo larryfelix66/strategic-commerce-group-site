@@ -175,21 +175,22 @@ function HomePage() {
               />
 
               <p className="eyebrow light">
-                Healthcare, Personal Care, and Essential Product Distribution
-              </p>
+  Wholesale Distribution & E-Commerce Infrastructure
+</p>
 
-              <h1>
-                Reliable distribution infrastructure built for compliance,
-                consistency, and long-term supply partnerships.
-              </h1>
+<h1>
+  National wholesale distribution built for brand protection,
+  compliance, and scalable growth.
+</h1>
 
-              <p className="hero-copy">
-                Strategic Commerce Group is a U.S.-based distribution company
-                focused on medical supplies, personal care products, home health
-                essentials, and wellness categories. We support direct webstore
-                sales and business purchasing through dependable procurement,
-                compliant sourcing, and scalable operational workflows.
-              </p>
+<p className="hero-copy">
+  Strategic Commerce Group is a U.S.-based wholesale distribution company
+  focused on health, wellness, grocery, household, and essential consumer
+  product categories. We partner with manufacturers and distributors to
+  support compliant sourcing, structured procurement, and scalable
+  multi-channel distribution across wholesale, business purchasing, and
+  digital commerce environments.
+</p>
 
               <div className="hero-actions">
                 <a className="button button-light" href="#distribution">
