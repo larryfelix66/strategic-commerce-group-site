@@ -522,9 +522,9 @@ function HomePage() {
 
               <p>
                 Strategic Commerce Group works with manufacturers and authorized
-                distributors to support healthcare, personal care, and essential
-                product categories through direct webstore sales and structured
-                business purchasing relationships.
+  distributors to support health, wellness, grocery, household, and
+  essential consumer product categories through compliant sourcing,
+  structured business purchasing, and scalable multi-channel distribution.
               </p>
             </div>
 
