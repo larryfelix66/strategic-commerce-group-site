@@ -356,7 +356,7 @@ function HomePage() {
             <SectionHeading
               eyebrow="Trust and compliance"
               title="Compliance, product integrity, and responsible sourcing are central to every supplier relationship we build."
-              text="Strategic Commerce Group operates with a strong commitment to authorized sourcing, product traceability, and professional distribution standards. We source through legitimate and verifiable wholesale channels and maintain clear procurement practices designed to support supplier confidence. Our focus is on non-prescription healthcare products, personal care, and wellness essentials distributed through our owned platform and direct business relationships. We do not participate in exporting, government contract bids, or prescription drug distribution."
+              text="Strategic Commerce Group operates with a strong commitment to authorized sourcing, product traceability, and professional distribution standards. We source through legitimate and verifiable wholesale channels and maintain clear procurement practices designed to support supplier confidence. Our focus is on responsible distribution across health, wellness, grocery, household, and essential consumer product categories. We do not participate in exporting, government contract bids, or prescription drug distribution."
             />
 
             <div className="grid three-up">
