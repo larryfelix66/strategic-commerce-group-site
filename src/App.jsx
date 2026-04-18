@@ -64,15 +64,15 @@ const complianceItems = [
 const whyBrandsPartner = [
   {
     title: 'Controlled Distribution',
-    text: 'We support responsible growth through direct webstore sales and structured business purchasing relationships.'
+    text: 'We support responsible growth through structured wholesale, business purchasing, and disciplined digital commerce distribution.'
   },
   {
     title: 'Scalable Procurement',
-    text: 'Our infrastructure is built to support consistent purchasing, replenishment, and long-term supply relationships.'
+    text: 'Our infrastructure is built to support consistent purchasing, replenishment, catalog growth, and long-term supply relationships.'
   },
   {
     title: 'Long-Term Partnerships',
-    text: 'We value stable supplier relationships built on transparency, compliance, and reliable execution.'
+    text: 'We value stable supplier relationships built on transparency, compliance, reliable execution, and responsible channel expansion.'
   }
 ];
 
