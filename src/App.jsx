@@ -237,9 +237,9 @@ function HomePage() {
         <section className="stats-section">
           <div className="container stats-grid">
             <div className="stat-card">
-              <strong>150+</strong>
-              <span>Brands</span>
-            </div>
+  <strong>150+</strong>
+  <span>Brand Portfolio Focus</span>
+</div>
             <div className="stat-card">
               <strong>5,000+</strong>
               <span>Products</span>
