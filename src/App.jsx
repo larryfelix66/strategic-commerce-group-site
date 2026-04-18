@@ -202,10 +202,10 @@ function HomePage() {
               </div>
 
               <div className="hero-trust-row">
-                <span>Authorized sourcing</span>
-                <span>Direct webstore sales</span>
-                <span>Non-RX healthcare focus</span>
-              </div>
+  <span>Authorized sourcing</span>
+  <span>Brand protection focused</span>
+  <span>Multi-channel distribution</span>
+</div>
             </div>
 
             <div className="hero-panel hero-panel-premium">
