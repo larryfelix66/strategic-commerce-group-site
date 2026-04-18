@@ -155,7 +155,7 @@ function HomePage() {
 
           <nav className="nav-links">
   <a href="#brands">Brands</a>
-  <a href="#medical">Medical Supply</a>
+  <a href="#medical">Categories</a>
   <a href="#catalog">Catalog</a>
   <a href="#compliance">Compliance</a>
   <a href="#suppliers">Suppliers</a>
