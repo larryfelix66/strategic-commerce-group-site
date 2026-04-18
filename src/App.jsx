@@ -48,13 +48,13 @@ const complianceItems = [
     text: 'Products are handled, stored, and distributed according to professional operating standards.'
   },
   {
-    title: 'Direct Webstore Sales',
-    text: 'Our focus is on distribution through our owned platform and direct customer relationships.'
-  },
+  title: 'Responsible Channel Strategy',
+  text: 'Our focus is on compliant distribution through structured wholesale, business purchasing, and controlled digital commerce channels.'
+},
   {
-    title: 'Non-RX Product Focus',
-    text: 'Our healthcare assortment is centered on non-prescription products, personal care, and wellness essentials.'
-  },
+  title: 'Category Focus',
+  text: 'Our assortment is centered on non-prescription healthcare, personal care, wellness, grocery, and essential consumer product categories.'
+},
   {
     title: 'Compliance Commitment',
     text: 'We do not participate in product exporting, government bids, or prescription drug distribution.'
