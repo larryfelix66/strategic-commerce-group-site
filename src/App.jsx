@@ -25,15 +25,6 @@ const featuredBrands = [
 
 const brandWall = [...featuredBrands];
 
-const catalogItems = [
-  { name: 'Digital Thermometer', sku: 'SCG-1001', category: 'Medical Supplies' },
-  { name: 'Blood Pressure Monitor', sku: 'SCG-1002', category: 'Home Health' },
-  { name: 'First Aid Kit', sku: 'SCG-1003', category: 'First Aid' },
-  { name: 'Nitrile Exam Gloves', sku: 'SCG-1004', category: 'PPE' },
-  { name: 'Alcohol Prep Pads', sku: 'SCG-1005', category: 'Infection Prevention' },
-  { name: 'Orthopedic Support Brace', sku: 'SCG-1006', category: 'Daily Living Aids' }
-];
-
 const complianceItems = [
   {
     title: 'Authorized Distribution',
