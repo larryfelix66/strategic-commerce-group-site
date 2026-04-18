@@ -183,14 +183,14 @@ function HomePage() {
   digital commerce environments.
 </p>
 
-              <div className="hero-actions">
-                <a className="button button-light" href="#distribution">
-                  View Distribution Model
-                </a>
-                <a className="button button-accent" href="#supplier-application">
-                  Become a Supplier
-                </a>
-              </div>
+             <div className="hero-actions">
+  <a className="button button-light" href="#distribution">
+    Explore Our Distribution Model
+  </a>
+  <a className="button button-accent" href="#supplier-application">
+    Apply for Partnership
+  </a>
+</div>
 
               <div className="hero-trust-row">
   <span>Authorized sourcing</span>
